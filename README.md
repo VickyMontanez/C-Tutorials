@@ -446,9 +446,10 @@ The while loop executes a block of code as long as a specified condition is true
      } while (condition);
      ```
    - **Functionality**: 
+
     The code inside the loop is executed once before checking the condition. If true, the loop continues; otherwise, it exits.
     **Example**:
-
+    
      ```c#
      int num = 0;
      do
@@ -670,7 +671,7 @@ Some methods of enums are frequently used to retrieve the name of a constant bas
          Friday,
          Saturday
      }
-
+     
      string day = Enum.GetName(typeof(DaysOfWeek), 1); // Returns "Monday"
      ```
 
@@ -688,7 +689,7 @@ Some methods of enums are frequently used to retrieve the name of a constant bas
          Friday,
          Saturday
      }
-
+     
      bool isDefined = Enum.IsDefined(typeof(DaysOfWeek), "Monday"); // Returns true
      ```
 
@@ -722,7 +723,7 @@ These methods are fundamental for defining the behavior and functionality of cla
      {
          public string Name { get; set; }
          public int Age { get; set; }
-
+     
          // Constructor
          public Person(string name, int age)
          {
@@ -730,7 +731,7 @@ These methods are fundamental for defining the behavior and functionality of cla
              Age = age;
          }
      }
-
+     
      Person person1 = new Person("John", 30);
      ```
 
@@ -742,13 +743,13 @@ These methods are fundamental for defining the behavior and functionality of cla
      {
          public string Name { get; set; }
          public int Age { get; set; }
-
+     
          public override string ToString()
          {
              return $"Name: {Name}, Age: {Age}";
          }
      }
-
+     
      Person person1 = new Person("John", 30);
      string personInfo = person1.ToString(); // Returns "Name: John, Age: 30"
      ```
@@ -761,17 +762,17 @@ These methods are fundamental for defining the behavior and functionality of cla
      {
          public string Name { get; set; }
          public int Age { get; set; }
-
+     
          public override bool Equals(object obj)
          {
              if (obj == null || GetType() != obj.GetType())
                  return false;
-
+     
              Person otherPerson = (Person)obj;
              return Name == otherPerson.Name && Age == otherPerson.Age;
          }
      }
-
+     
      Person person1 = new Person { Name = "John", Age = 30 };
      Person person2 = new Person { Name = "John", Age = 30 };
      bool isEqual = person1.Equals(person2); // Returns true
@@ -785,13 +786,13 @@ These methods are fundamental for defining the behavior and functionality of cla
      {
          public string Name { get; set; }
          public int Age { get; set; }
-
+     
          public override int GetHashCode()
          {
              return Name.GetHashCode() ^ Age.GetHashCode();
          }
      }
-
+     
      Person person = new Person { Name = "John", Age = 30 };
      int hashCode = person.GetHashCode(); // Returns a unique hash code
      ```
@@ -806,13 +807,13 @@ These methods are fundamental for defining the behavior and functionality of cla
          {
              return a + b;
          }
-
+     
          public int Subtract(int a, int b)
          {
              return a - b;
          }
      }
-
+     
      Calculator calc = new Calculator();
      int result = calc.Add(5, 3); // result will be 8
      ```
@@ -846,7 +847,7 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      {
          public int X { get; }
          public int Y { get; }
-
+     
          // Constructor
          public Point(int x, int y)
          {
@@ -854,7 +855,7 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
              Y = y;
          }
      }
-
+     
      Point p = new Point(3, 4);
      ```
 
@@ -866,17 +867,17 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      {
          public int X { get; }
          public int Y { get; }
-
+     
          public override bool Equals(object obj)
          {
              if (!(obj is Point))
                  return false;
-
+     
              Point otherPoint = (Point)obj;
              return X == otherPoint.X && Y == otherPoint.Y;
          }
      }
-
+     
      Point p1 = new Point(3, 4);
      Point p2 = new Point(3, 4);
      bool isEqual = p1.Equals(p2); // Returns true
@@ -890,13 +891,13 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      {
          public int X { get; }
          public int Y { get; }
-
+     
          public override int GetHashCode()
          {
              return X.GetHashCode() ^ Y.GetHashCode();
          }
      }
-
+     
      Point p = new Point(3, 4);
      int hashCode = p.GetHashCode(); // Returns a unique hash code
      ```
@@ -909,13 +910,13 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      {
          public int X { get; }
          public int Y { get; }
-
+     
          public override string ToString()
          {
              return $"({X}, {Y})";
          }
      }
-
+     
      Point p = new Point(3, 4);
      string pointStr = p.ToString(); // Returns "(3, 4)"
      ```
@@ -928,19 +929,19 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      {
          public int Width { get; }
          public int Height { get; }
-
+     
          public Rectangle(int width, int height)
          {
              Width = width;
              Height = height;
          }
-
+     
          public int CalculateArea()
          {
              return Width * Height;
          }
      }
-
+     
      Rectangle rect = new Rectangle(5, 3);
      int area = rect.CalculateArea(); // area will be 15
      ```
@@ -1460,5 +1461,5 @@ class Program
     }
 }
 ```
-## Resumen y Conclusiones
+## Summary and conclusions
 This documentation provides a condensed overview of fundamental C# concepts for beginners. It covers primitive types, variables, operators, control flow structures, loops, type conversions, non-primitive types, input/output operations, and handling dates and times. By understanding these concepts, beginners gain a solid understanding of C# programming essentials, enabling them to write basic programs and build a foundation for further learning and exploration in the language.

@@ -33,19 +33,25 @@
       - [Explicit Conversion (Casting)](#explicit-conversion-casting)
   - [2. Object-Oriented Programming in C#](#2-object-oriented-programming-in-c)
     - [Non-Primitive Types](#non-primitive-types)
-      - [Classes](#classes)
-      - [Methods](#methods)
-      - [Access Modifiers](#access-modifiers)
-        - [Public Modifier](#public-modifier)
-        - [Private Modifier](#private-modifier)
-        - [Protected Modifier](#protected-modifier)
-        - [Internal Modifier](#internal-modifier)
-        - [Internal Protected Modifier](#internal-protected-modifier)
-        - [Readonly Modifier](#readonly-modifier)
       - [Arrays](#arrays)
       - [Strings](#strings)
       - [Enumerations](#enumerations)
       - [Structs](#structs)
+    - [Classes and Objects](#classes-and-objects)
+      - [Class Structure](#class-structure)
+      - [Class Coupling](#class-coupling)
+      - [Objects](#objects)
+    - [Inheritance](#inheritance)
+    - [Polymorphism](#polymorphism)
+    - [Encapsulation](#encapsulation)
+    - [Methods](#methods)
+    - [Access Modifiers](#access-modifiers)
+      - [Public Modifier](#public-modifier)
+      - [Private Modifier](#private-modifier)
+      - [Protected Modifier](#protected-modifier)
+      - [Internal Modifier](#internal-modifier)
+      - [Internal Protected Modifier](#internal-protected-modifier)
+      - [Readonly Modifier](#readonly-modifier)
     - [Input and Output Operations in C#](#input-and-output-operations-in-c)
       - [File Operations:](#file-operations)
     - [Directory Operations:](#directory-operations)
@@ -57,6 +63,8 @@
     - [Summary and conclusions](#summary-and-conclusions)
 
 
+
+------
 
 ## 1. C# Basics Fundamentals
 
@@ -498,321 +506,16 @@ Explicit conversions are used when converting from a larger data type to a small
 
 
 
+
+
 ## 2. Object-Oriented Programming in C#
 
 ### Non-Primitive Types
 Non-primitive types in C# are data types that are composed of primitive types or other non-primitive types. They include:
-- Classes
 - Arrays
 - Strings
 - Enumerations
 - Structs
-
-#### Classes
-Classes are reference types that serve as blueprints for creating objects. They encapsulate data for the object and define methods for manipulating that data. Classes support inheritance, encapsulation, and polymorphism, allowing for the creation of complex data structures and behavior.
-
-```c#
-class Person
-{
-    public string Name { get; set; }
-    public int Age { get; set; }
-
-    public void PrintInfo()
-    {
-        Console.WriteLine($"Name: {Name}, Age: {Age}");
-    }
-}
-
-Person person1 = new Person();
-person1.Name = "John";
-person1.Age = 30;
-person1.PrintInfo(); // Output: Name: John, Age: 30
-```
-These methods are fundamental for defining the behavior and functionality of classes in C#. They allow for encapsulation, abstraction, and code reusability within the class.
-
-1. **Constructor:**
-   - **Description:** Initializes an instance of the class.
-   - **Example:**
-     ```csharp
-     public class Person
-     {
-         public string Name { get; set; }
-         public int Age { get; set; }
-     
-         // Constructor
-         public Person(string name, int age)
-         {
-             Name = name;
-             Age = age;
-         }
-     }
-     
-     Person person1 = new Person("John", 30);
-     ```
-
-2. **ToString Method:**
-   - **Description:** Returns a string that represents the current object.
-   - **Example:**
-     ```csharp
-     public class Person
-     {
-         public string Name { get; set; }
-         public int Age { get; set; }
-     
-         public override string ToString()
-         {
-             return $"Name: {Name}, Age: {Age}";
-         }
-     }
-     
-     Person person1 = new Person("John", 30);
-     string personInfo = person1.ToString(); // Returns "Name: John, Age: 30"
-     ```
-
-3. **Equals Method:**
-   - **Description:** Determines whether the specified object is equal to the current object.
-   - **Example:**
-     ```csharp
-     public class Person
-     {
-         public string Name { get; set; }
-         public int Age { get; set; }
-     
-         public override bool Equals(object obj)
-         {
-             if (obj == null || GetType() != obj.GetType())
-                 return false;
-     
-             Person otherPerson = (Person)obj;
-             return Name == otherPerson.Name && Age == otherPerson.Age;
-         }
-     }
-     
-     Person person1 = new Person { Name = "John", Age = 30 };
-     Person person2 = new Person { Name = "John", Age = 30 };
-     bool isEqual = person1.Equals(person2); // Returns true
-     ```
-
-4. **GetHashCode Method:**
-   - **Description:** Serves as the default hash function.
-   - **Example:**
-     ```csharp
-     public class Person
-     {
-         public string Name { get; set; }
-         public int Age { get; set; }
-     
-         public override int GetHashCode()
-         {
-             return Name.GetHashCode() ^ Age.GetHashCode();
-         }
-     }
-     
-     Person person = new Person { Name = "John", Age = 30 };
-     int hashCode = person.GetHashCode(); // Returns a unique hash code
-     ```
-
-5. **Custom Methods:**
-   - **Description:** Methods defined by the programmer to perform specific actions or calculations.
-   - **Example:**
-     ```csharp
-     public class Calculator
-     {
-         public int Add(int a, int b)
-         {
-             return a + b;
-         }
-     
-         public int Subtract(int a, int b)
-         {
-             return a - b;
-         }
-     }
-     
-     Calculator calc = new Calculator();
-     int result = calc.Add(5, 3); // result will be 8
-     ```
-
-#### Methods
-In object-oriented programming, a class acts as a blueprint or template for creating objects. Central to this blueprint are the methods the actionable components that define the behavior of the objects created from the class.
-
-Methods encapsulate functionality within a class, representing the actions or behaviors that objects of that class can perform. Each method typically performs a specific task or set of tasks, enabling objects to interact with each other and manipulate data.
-
-**Characteristics:**
-
-- **Name and Signature:** Each method has a unique name and signature, consisting of the method's name and its parameters, if any. This signature differentiates one method from another within the same class.
-    ```c#
-    public class MyClass
-        {
-            // Method with name 'MyMethod' and no parameters
-            public void MyMethod()
-            {
-                // Method implementation
-            }
-            
-            // Method with name 'Add' and two parameters of type int
-            public int Add(int a, int b)
-            {
-                // Method implementation
-                return a + b;
-            }
-        }
-    ```
-  
-- **Return Type:** Methods may return a value after performing their tasks, indicated by a return type such as int, string, or void if no value is returned.
-  ```c#
-    public class MyClass
-        {
-            // Method with return type int
-            public int Multiply(int a, int b)
-            {
-                // Method implementation
-                return a * b;
-            }
-            
-            // Method with no return type (void)
-            public void DisplayMessage(string message)
-            {
-                // Method implementation
-                Console.WriteLine(message);
-            }
-        }
-  ```
-  
-- **Parameters:** Methods may accept input parameters, enabling them to receive data necessary for their operation.
-  ```c#
-    public class MyClass
-        {
-            // Method with parameters
-            public int Subtract(int a, int b)
-            {
-                // Method implementation
-                return a - b;
-            }
-            
-            // Method with no parameters
-            public void Greet(string name)
-            {
-                // Method implementation
-                Console.WriteLine($"Hello, {name}!");
-            }
-        }
-
-  ```
-
-#### Access Modifiers
-
-In C#, various elements such as **methods, variables, constructors, and sometimes even classes**, come equipped with access modifiers. These modifiers, including `public`, `private`, `protected`, and `readonly`, dictate the visibility and accessibility of these elements from other classes. By employing access modifiers, developers can precisely control how their code interacts with other parts of the program, enhancing encapsulation and facilitating robust software design.
-
-##### Public Modifier
-The public access modifier makes a member accessible from any other class. It has the widest scope among all access modifiers and allows the member to be accessed from outside the defining class, including from other assemblies.
-```c#
-  // Public class accessible from anywhere
-  public class MyClass
-    {
-        // Public field accessible from anywhere
-        public string MyPublicField;
-
-        // Constructor with public access
-        public MyClass(int value)
-        {
-            MyPublicField = "value";
-        }
-
-        // Public method accessible from anywhere
-        public void MyPublicMethod()
-        {
-            // Method implementation
-        }
-    }
- ```
-
-##### Private Modifier
-The private access modifier restricts access to the member to within the same class or struct. It is the most restrictive access level and is typically used to hide implementation details.
-```c#
-    public class MyClass
-    {
-        // Private field accessible only within the class
-        private int myPrivateField;
-        // Private method accessible only within the class
-        private void MyPrivateMethod()
-        {
-            // Method implementation
-        }
-    }
-```
-##### Protected Modifier
-The protected access modifier allows access to the member within the same class or by derived classes. It is commonly used to encapsulate implementation details and provide access to derived classes for overriding or extending functionality.
-```c#
-    public class MyClass
-    {
-        // Protected field accessible within the class and derived classes
-        protected int protectedField;
-    }
-
-    public class MyDerivedClass : MyClass
-    {
-        // Protected method accessible within the class and derived classes
-        protected void AccessProtectedField()
-        {
-            protectedField = 10; // Accessing protected field from the base class
-        }
-    }
-```
-##### Internal Modifier
-The internal access modifier limits access to the member to within the same assembly. Members marked as internal can be accessed from any class in the same assembly but not from classes in external assemblies.
-```c#
-    // Internal class accessible within the same assembly
-    internal class MyInternalClass
-    {
-        // Internal field accessible within the same assembly
-        internal int internalField;
-        // Internal method accessible within the same assembly
-        internal void InternalMethod()
-        {
-            // Method implementation
-        }
-    }
-```
-##### Internal Protected Modifier
-The protected internal access modifier combines the behavior of both protected and internal. It allows access to the member within the same assembly and by derived classes, regardless of the assembly in which they reside.
-```c#
-    public class MyClass
-    {
-        // Protected internal field accessible within the same assembly and by derived classes
-        protected internal int protectedInternalField;
-    }
-
-    internal class MyDerivedClass : MyClass
-    {
-        // Protected internal method accessible within the same assembly and by derived classes
-        protected internal void AccessProtectedInternalField()
-        {
-            protectedInternalField = 20; // Accessing protected internal field
-        }
-    }
-```
-
-##### Readonly Modifier
-The readonly modifier can be applied to fields and indicates that the field's value can only be assigned once, either when it's declared or in a constructor. Once initialized, the value of a readonly field cannot be changed.
-```c#
-    public class MyClass
-    {
-        // Readonly field can only be assigned once, either when declared or in constructor
-        public readonly int ReadonlyField;
-
-        public MyClass(int value)
-        {
-            ReadonlyField = value; // Assigning value in constructor
-        }
-
-        // Readonly method cannot be overridden
-        public readonly void ReadonlyMethod()
-        {
-            Console.WriteLine("Readonly method called.");
-        }
-    }
-```
 
 #### Arrays
 Arrays are data structures that store a fixed-size sequential collection of elements of the same type.
@@ -1034,7 +737,7 @@ struct Point
 Point p1 = new Point(1, 2);
 Console.WriteLine($"X: {p1.X}, Y: {p1.Y}"); // Output: X: 1, Y: 2
 ```
-Srtucts can contain methods like: constructors, equality comparison methods, hash code generation methods, and custom methods as required by your application.
+Structs can contain methods like: constructors, equality comparison methods, hash code generation methods, and custom methods as required by your application.
 
 1. **Constructor:**
    - **Description:** Initializes an instance of the struct.
@@ -1142,6 +845,528 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      Rectangle rect = new Rectangle(5, 3);
      int area = rect.CalculateArea(); // area will be 15
      ```
+
+### Classes and Objects
+Classes are reference types that serve as blueprints for creating objects. They encapsulate data for the object and define methods for manipulating that data. Classes support inheritance, encapsulation, and polymorphism, allowing for the creation of complex data structures and behavior.
+
+```c#
+class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void PrintInfo()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+Person person1 = new Person();
+person1.Name = "John";
+person1.Age = 30;
+person1.PrintInfo(); // Output: Name: John, Age: 30
+```
+#### Class Structure
+
+1. **Fields:**
+   - **Description:** Fields are variables declared within a class to store data. They represent the state of an object.
+   - **Example:**
+     ```csharp
+     class Person
+     {
+         public string Name; // Field
+         public int Age;     // Field
+     }
+     ```
+
+2. **Properties:**
+   - **Description:** Properties provide a way to encapsulate fields, allowing controlled access to the data stored in a class.
+   - **Example:**
+     ```csharp
+     class Person
+     {
+         private string name; // Field
+         public string Name   // Property
+         {
+             get { return name; }
+             set { name = value; }
+         }
+     }
+     ```
+
+3. **Access Modifiers:**
+   - **Description:** Access modifiers control the accessibility of classes, methods, and other members within a program.
+   - **Example:**
+     ```csharp
+     public class MyClass    // Public class
+     {
+         private int myField; // Private field
+         public void MyMethod() { } // Public method
+     }
+     ```
+
+4. **Static Members:**
+   - **Description:** Static members belong to the class itself rather than to instances of the class. They are shared among all instances of the class.
+   - **Example:**
+     ```csharp
+     class Circle
+     {
+         public static double Pi = 3.14;
+     }
+     double area = Circle.Pi * radius * radius;
+     ```
+
+5. **Inheritance:**
+   - **Description:** Inheritance allows a class to inherit properties and behavior from another class, enabling code reuse and creating a hierarchy of classes.
+   - **Example:**
+     ```csharp
+     class Animal { }        // Base class
+     class Dog : Animal { }  // Derived class
+     ```
+
+6. **Constructor:**
+   - **Description:** Initializes an instance of the class.
+   - **Example:**
+     ```csharp
+     public class Person
+     {
+         public string Name { get; set; }
+         public int Age { get; set; }
+     
+         // Constructor
+         public Person(string name, int age)
+         {
+             Name = name;
+             Age = age;
+         }
+     }
+     
+     Person person1 = new Person("John", 30);
+     ```
+
+#### Class Coupling
+Class coupling refers to the degree of interdependence between classes in object-oriented programming. High coupling indicates tight connections between classes, making them highly dependent on each other. Conversely, low coupling implies classes are more independent, which promotes flexibility and maintainability.
+
+There are various types of class coupling:
+
+* **Content Coupling:** A class directly accesses or modifies the internal state of another class. This is considered the tightest form of coupling.
+```c#
+    class ClassA
+    {
+        private ClassB b;
+
+        public void Method() {
+
+            b.SomeMethod();
+
+        }
+    }
+```
+* **Common Coupling:** Classes share a common global data. Changes in the shared data affect multiple classes
+```c#
+    static class Common 
+    {
+        public static int Data;
+    }
+
+    class ClassA 
+    {
+        public void Method() 
+        {
+            Common.Data = 10;
+        }
+    }
+
+    class ClassB 
+    {
+        public void Method() 
+        {
+            int data = Common.Data;
+        }
+    }
+
+```
+* **Control Coupling:** One class controls the flow of execution of another by passing control information.
+```c#
+    class ClassA 
+    {
+        public void Method(ClassB b) 
+        {
+            b.Process();
+        }
+    }
+
+    class ClassB 
+    {
+        public void Process() 
+        {
+            // Do something
+        }
+    }
+```
+* **Stamp Coupling:** Classes share a composite data structure and use only a part of it.
+```c#
+    class Composite
+    {
+        public int Data;
+        public string Info;
+    }
+
+    class ClassA 
+    {
+        public void Method(Composite c) 
+        {
+            int data = c.Data;
+        }
+    }
+
+    class ClassB 
+    {
+        public void Method(Composite c) 
+        {
+            string info = c.Info;
+        }
+    }
+```
+* **Data Coupling:** Classes communicate by passing data through method parameters or return values. This is considered the loosest form of coupling.
+```c#
+    class ClassA 
+    {
+        public void Method(int data) 
+        {
+            // Do something with data
+        }
+    }
+
+    class ClassB 
+    {
+        public int Method() 
+        {
+            // Generate some data
+            return 10;
+        }
+    }
+```
+**Reducing class coupling is crucial for writing maintainable and flexible code.** Strategies for reducing coupling include applying design principles like SOLID, dependency injection, and using interfaces to decouple implementations.
+
+#### Objects
+
+Objects are instances of classes. They encapsulate both data and behavior defined by the class.
+
+- **Instantiation:**
+  - **Description:** Instantiation is the process of creating an object from a class.
+  - **Example:**
+    ```csharp
+    Person person1 = new Person("John", 30);
+    ```
+
+- **Accessing Members:**
+  - **Description:** Objects can access the members (fields, properties, methods) defined in their class.
+  - **Example:**
+    ```csharp
+    string name = person1.Name;
+    int age = person1.Age;
+    person1.PrintInfo();
+    ```
+
+- **Multiple Instances:**
+  - **Description:** Multiple objects can be created from the same class, each with its own set of data and behavior.
+  - **Example:**
+    ```csharp
+    Person person2 = new Person("Alice", 25);
+    ```
+
+- **Object Initialization:**
+  - **Description:** Objects can be initialized with data using constructors or by setting property values after instantiation.
+  - **Example:**
+    ```csharp
+    Person person3 = new Person { Name = "Bob", Age = 35 };
+    ```
+
+- **Object Comparison:**
+  - **Description:** Objects can be compared for equality using the Equals method or other comparison techniques.
+  - **Example:**
+    ```csharp
+    bool isEqual = person1.Equals(person2);
+    ```
+
+### Inheritance
+
+Inheritance is a fundamental concept in object-oriented programming that allows a class (the child or derived class) to inherit properties and behavior from another class (the parent or base class). It promotes code reuse and enables the creation of hierarchical relationships between classes.
+
+- **Base Class:** Also known as the parent or superclass, it's the class whose members are inherited by another class.
+- **Derived Class:** Also known as the child or subclass, it's the class that inherits from another class.
+- **Syntax:**
+  ```csharp
+  class BaseClass
+  {
+      // Base class members
+  }
+  
+  class DerivedClass : BaseClass
+  {
+      // Derived class members
+  }
+  ```
+- **Example:**
+  ```csharp
+  class Animal
+  {
+      public void Eat()
+      {
+          Console.WriteLine("Animal is eating.");
+      }
+  }
+  
+  class Dog : Animal
+  {
+      // Dog inherits the Eat() method from Animal
+  }
+  ```
+
+### Polymorphism
+
+Polymorphism is the ability of objects to take on multiple forms. In the context of inheritance, it allows a method in a derived class to have the same name as a method in its base class but with different behavior. This enables methods to be called on objects of different classes through a common interface.
+
+- **Types:**
+  1. **Compile-Time Polymorphism (Method Overloading):** Occurs when multiple methods in the same class have the same name but different parameters.
+  2. **Run-Time Polymorphism (Method Overriding):** Occurs when a method in a derived class has the same signature as a method in its base class, and the derived class provides its own implementation of that method.
+
+- **Example (Method Overriding):**
+  ```csharp
+  class Animal
+  {
+      public virtual void MakeSound()
+      {
+          Console.WriteLine("Animal makes a sound.");
+      }
+  }
+  
+  class Dog : Animal
+  {
+      public override void MakeSound()
+      {
+          Console.WriteLine("Dog barks.");
+      }
+  }
+  ```
+
+### Encapsulation
+
+Encapsulation is the bundling of data (fields or properties) and methods (functions or procedures) that operate on the data into a single unit, typically a class. It hides the internal state of an object and only exposes the necessary functionality through well-defined interfaces. Encapsulation helps in achieving data abstraction, information hiding, and modular programming.
+
+- **Benefits:**
+  1. **Data Hiding:** Encapsulation allows the internal state of an object to be hidden from outside interference, preventing unauthorized access and modification.
+  2. **Abstraction:** It presents a simplified view of an object by exposing only essential features while hiding the implementation details.
+  3. **Modularity:** Encapsulation promotes modularity by organizing code into self-contained units, making it easier to manage, maintain, and reuse.
+
+- **Example:**
+  ```csharp
+  class BankAccount
+  {
+      private decimal balance;
+  
+      public void Deposit(decimal amount)
+      {
+          balance += amount;
+      }
+  
+      public void Withdraw(decimal amount)
+      {
+          if (amount <= balance)
+              balance -= amount;
+          else
+              Console.WriteLine("Insufficient funds.");
+      }
+  
+      public decimal GetBalance()
+      {
+          return balance;
+      }
+  }
+  ```
+
+### Methods
+In object-oriented programming, a class acts as a blueprint or template for creating objects. Central to this blueprint are the methods the actionable components that define the behavior of the objects created from the class.
+
+Methods encapsulate functionality within a class, representing the actions or behaviors that objects of that class can perform. Each method typically performs a specific task or set of tasks, enabling objects to interact with each other and manipulate data.
+
+**Characteristics:**
+
+- **Name and Signature:** Each method has a unique name and signature, consisting of the method's name and its parameters, if any. This signature differentiates one method from another within the same class.
+    ```c#
+    public class MyClass
+        {
+            // Method with name 'MyMethod' and no parameters
+            public void MyMethod()
+            {
+                // Method implementation
+            }
+            
+            // Method with name 'Add' and two parameters of type int
+            public int Add(int a, int b)
+            {
+                // Method implementation
+                return a + b;
+            }
+        }
+    ```
+  
+- **Return Type:** Methods may return a value after performing their tasks, indicated by a return type such as int, string, or void if no value is returned.
+  ```c#
+    public class MyClass
+        {
+            // Method with return type int
+            public int Multiply(int a, int b)
+            {
+                // Method implementation
+                return a * b;
+            }
+            
+            // Method with no return type (void)
+            public void DisplayMessage(string message)
+            {
+                // Method implementation
+                Console.WriteLine(message);
+            }
+        }
+  ```
+  
+- **Parameters:** Methods may accept input parameters, enabling them to receive data necessary for their operation.
+  ```c#
+    public class MyClass
+        {
+            // Method with parameters
+            public int Subtract(int a, int b)
+            {
+                // Method implementation
+                return a - b;
+            }
+            
+            // Method with no parameters
+            public void Greet(string name)
+            {
+                // Method implementation
+                Console.WriteLine($"Hello, {name}!");
+            }
+        }
+  
+  ```
+
+
+### Access Modifiers
+
+In C#, various elements such as **methods, variables, constructors, and sometimes even classes**, come equipped with access modifiers. These modifiers, including `public`, `private`, `protected`, and `readonly`, dictate the visibility and accessibility of these elements from other classes. By employing access modifiers, developers can precisely control how their code interacts with other parts of the program, enhancing encapsulation and facilitating robust software design.
+
+#### Public Modifier
+The public access modifier makes a member accessible from any other class. It has the widest scope among all access modifiers and allows the member to be accessed from outside the defining class, including from other assemblies.
+```c#
+  // Public class accessible from anywhere
+  public class MyClass
+    {
+        // Public field accessible from anywhere
+        public string MyPublicField;
+
+        // Constructor with public access
+        public MyClass(int value)
+        {
+            MyPublicField = "value";
+        }
+
+        // Public method accessible from anywhere
+        public void MyPublicMethod()
+        {
+            // Method implementation
+        }
+    }
+```
+
+#### Private Modifier
+The private access modifier restricts access to the member to within the same class or struct. It is the most restrictive access level and is typically used to hide implementation details.
+```c#
+    public class MyClass
+    {
+        // Private field accessible only within the class
+        private int myPrivateField;
+        // Private method accessible only within the class
+        private void MyPrivateMethod()
+        {
+            // Method implementation
+        }
+    }
+```
+#### Protected Modifier
+The protected access modifier allows access to the member within the same class or by derived classes. It is commonly used to encapsulate implementation details and provide access to derived classes for overriding or extending functionality.
+```c#
+    public class MyClass
+    {
+        // Protected field accessible within the class and derived classes
+        protected int protectedField;
+    }
+
+    public class MyDerivedClass : MyClass
+    {
+        // Protected method accessible within the class and derived classes
+        protected void AccessProtectedField()
+        {
+            protectedField = 10; // Accessing protected field from the base class
+        }
+    }
+```
+#### Internal Modifier
+The internal access modifier limits access to the member to within the same assembly. Members marked as internal can be accessed from any class in the same assembly but not from classes in external assemblies.
+```c#
+    // Internal class accessible within the same assembly
+    internal class MyInternalClass
+    {
+        // Internal field accessible within the same assembly
+        internal int internalField;
+        // Internal method accessible within the same assembly
+        internal void InternalMethod()
+        {
+            // Method implementation
+        }
+    }
+```
+#### Internal Protected Modifier
+The protected internal access modifier combines the behavior of both protected and internal. It allows access to the member within the same assembly and by derived classes, regardless of the assembly in which they reside.
+```c#
+    public class MyClass
+    {
+        // Protected internal field accessible within the same assembly and by derived classes
+        protected internal int protectedInternalField;
+    }
+
+    internal class MyDerivedClass : MyClass
+    {
+        // Protected internal method accessible within the same assembly and by derived classes
+        protected internal void AccessProtectedInternalField()
+        {
+            protectedInternalField = 20; // Accessing protected internal field
+        }
+    }
+```
+
+#### Readonly Modifier
+The readonly modifier can be applied to fields and indicates that the field's value can only be assigned once, either when it's declared or in a constructor. Once initialized, the value of a readonly field cannot be changed.
+```c#
+    public class MyClass
+    {
+        // Readonly field can only be assigned once, either when declared or in constructor
+        public readonly int ReadonlyField;
+
+        public MyClass(int value)
+        {
+            ReadonlyField = value; // Assigning value in constructor
+        }
+
+        // Readonly method cannot be overridden
+        public readonly void ReadonlyMethod()
+        {
+            Console.WriteLine("Readonly method called.");
+        }
+    }
+```
 
 ### Input and Output Operations in C#
 **System.IO Namespace**

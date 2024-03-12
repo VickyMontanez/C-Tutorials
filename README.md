@@ -1,59 +1,71 @@
-# C# Basics for Beginners
+# C# A Comprehensive Developer's Guide
+- [C# A Comprehensive Developer's Guide](#c-a-comprehensive-developers-guide)
+  - [1. C# Basics Fundamentals](#1-c-basics-fundamentals)
+    - [Primitive Types](#primitive-types)
+      - [Integer Numeric Types](#integer-numeric-types)
+      - [Floating-Point Numeric Types](#floating-point-numeric-types)
+      - [Other Primitive Types](#other-primitive-types)
+    - [Variables and Constants](#variables-and-constants)
+      - [Declaring and Initializing Variables](#declaring-and-initializing-variables)
+      - [Declaring and Initializing Constants](#declaring-and-initializing-constants)
+    - [Operators in C#](#operators-in-c)
+        - [Arithmetic Operators](#arithmetic-operators)
+      - [Comparison Operators](#comparison-operators)
+      - [Assignment Operators](#assignment-operators)
+      - [Boolean logical Operators](#boolean-logical-operators)
+      - [Increment and Decrement Operators](#increment-and-decrement-operators)
+      - [Bitwise and shift Operators](#bitwise-and-shift-operators)
+        - [Why use Bitwise Operators?](#why-use-bitwise-operators)
+        - [Why use a Byte?](#why-use-a-byte)
+        - [Why use the Binary System?](#why-use-the-binary-system)
+          - [Binary Representation](#binary-representation)
+          - [Bitwise Operations Example](#bitwise-operations-example)
+    - [Control Flow and Conditional Structures](#control-flow-and-conditional-structures)
+      - [If-else](#if-else)
+      - [Switch-case](#switch-case)
+      - [Ternary operator](#ternary-operator)
+    - [Loops](#loops)
+      - [For Loop](#for-loop)
+      - [While Loop](#while-loop)
+      - [Do-While Loop](#do-while-loop)
+    - [Type Conversions](#type-conversions)
+      - [Implicit Conversion](#implicit-conversion)
+      - [Explicit Conversion (Casting)](#explicit-conversion-casting)
+  - [2. Object-Oriented Programming in C#](#2-object-oriented-programming-in-c)
+    - [Non-Primitive Types](#non-primitive-types)
+      - [Classes](#classes)
+      - [Methods](#methods)
+      - [Access Modifiers](#access-modifiers)
+        - [Public Modifier](#public-modifier)
+        - [Private Modifier](#private-modifier)
+        - [Protected Modifier](#protected-modifier)
+        - [Internal Modifier](#internal-modifier)
+        - [Internal Protected Modifier](#internal-protected-modifier)
+        - [Readonly Modifier](#readonly-modifier)
+      - [Arrays](#arrays)
+      - [Strings](#strings)
+      - [Enumerations](#enumerations)
+      - [Structs](#structs)
+    - [Input and Output Operations in C#](#input-and-output-operations-in-c)
+      - [File Operations:](#file-operations)
+    - [Directory Operations:](#directory-operations)
+      - [Path Operations:](#path-operations)
+      - [Stream-based Operations:](#stream-based-operations)
+    - [Other Functionalities](#other-functionalities)
+      - [DateTime and TimeSpan](#datetime-and-timespan)
+      - [StringBuilder](#stringbuilder)
+    - [Summary and conclusions](#summary-and-conclusions)
+
+
+
+## 1. C# Basics Fundamentals
 
 C# is a powerful Object Orientated language. This documentation serves as an entry point into the world of C# programming.
 
-- [C# Basics for Beginners](#c-basics-for-beginners)
-  - [Primitive Types](#primitive-types)
-    - [Integer Numeric Types](#integer-numeric-types)
-    - [Floating-Point Numeric Types](#floating-point-numeric-types)
-    - [Other Primitive Types](#other-primitive-types)
-  - [Variables and Constants](#variables-and-constants)
-    - [Declaring and Initializing Variables](#declaring-and-initializing-variables)
-    - [Declaring and Initializing Constants](#declaring-and-initializing-constants)
-  - [Operators in C#](#operators-in-c)
-    - [Arithmetic Operators](#arithmetic-operators)
-    - [Comparison Operators](#comparison-operators)
-    - [Assignment Operators](#assignment-operators)
-    - [Boolean logical Operators](#boolean-logical-operators)
-    - [Increment and Decrement Operators](#increment-and-decrement-operators)
-    - [Bitwise and shift Operators](#bitwise-and-shift-operators)
-      - [Why use Bitwise Operators?](#why-use-bitwise-operators)
-      - [Why use a Byte?](#why-use-a-byte)
-      - [Why use the Binary System?](#why-use-the-binary-system)
-        - [Binary Representation](#binary-representation)
-      - [Bitwise Operations Example](#bitwise-operations-example)
-  - [Control Flow and Conditional Structures](#control-flow-and-conditional-structures)
-    - [If-else](#if-else)
-    - [Switch-case](#switch-case)
-    - [Ternary operator](#ternary-operator)
-  - [Loops](#loops)
-    - [For Loop](#for-loop)
-    - [While Loop](#while-loop)
-    - [Do-While Loop](#do-while-loop)
-  - [Type Conversions](#type-conversions)
-    - [Implicit Conversion](#implicit-conversion)
-    - [Explicit Conversion (Casting)](#explicit-conversion-casting)
-  - [Non-Primitive Types](#non-primitive-types)
-    - [Arrays](#arrays)
-    - [Strings](#strings)
-    - [Enumerations:](#enumerations)
-    - [Classes](#classes)
-    - [Structs](#structs)
-  - [Input and Output Operations in C#](#input-and-output-operations-in-c)
-    - [File Operations:](#file-operations)
-    - [Directory Operations:](#directory-operations)
-    - [Path Operations:](#path-operations)
-    - [Stream-based Operations:](#stream-based-operations)
-  - [Other Functionalities](#other-functionalities)
-    - [DateTime and TimeSpan](#datetime-and-timespan)
-    - [StringBuilder](#stringbuilder)
-  - [Resumen y Conclusiones](#resumen-y-conclusiones)
-
-
-## Primitive Types
+### Primitive Types
 Primitive types in C# are the basic building blocks for constructing more complex data structures. They include:
 
-### Integer Numeric Types
+#### Integer Numeric Types
 - **int**: Represents signed integers.
   ```c#
   int number = 10;
@@ -95,7 +107,7 @@ Primitive types in C# are the basic building blocks for constructing more comple
     ushort smallPositiveNumber = 30000;
     ```
 
-### Floating-Point Numeric Types
+#### Floating-Point Numeric Types
 - **float**: Represents single-precision floating-point numbers.
     ```c#
     float floatValue = 3.14f;
@@ -109,7 +121,7 @@ Primitive types in C# are the basic building blocks for constructing more comple
     decimal decimalValue = 123.456m;
     ```
 
-### Other Primitive Types
+#### Other Primitive Types
 - **char**: Represents a single Unicode character.
     ```c#
     char character = 'A';
@@ -120,11 +132,11 @@ Primitive types in C# are the basic building blocks for constructing more comple
      bool isTrue = true;
     ```
 
-## Variables and Constants
+### Variables and Constants
 
 Variables and constants are similar; they are named storage locations that hold data. However, the values of variables can change during the execution of a program, whereas the values of constants cannot be changed after they are initialized. Both variables and constants must be declared with a specific type before they can be used.
 
-### Declaring and Initializing Variables
+#### Declaring and Initializing Variables
 
 In C#, declaring a variable is all about specifying the name of the variable you want to create. The basic syntax for declaring a variable is as follows:
 
@@ -145,7 +157,7 @@ int age; // Declaration of an integer variable
 age = 25; // Assignment of a value to the variable
 ```
 
-### Declaring and Initializing Constants
+#### Declaring and Initializing Constants
 
 In C#, constants are different from variables in that they are declared using the keyword `const`. The basic syntax for declaring a constant is as follows:
 
@@ -168,7 +180,7 @@ For example, if you want to declare and initialize a PI constant of type double 
 const double PI = 3.14159;
 ```
 
-## Operators in C#
+### Operators in C#
 C# provides a variety of operators, many of which are supported by the built-in types, enabling you to perform fundamental operations with values of those types. Those operators include the following groups:
 
 - **Arithmetic operators** that perform arithmetic operations with numeric operands.
@@ -179,7 +191,7 @@ C# provides a variety of operators, many of which are supported by the built-in 
 - **Bitwise and shift operators** that perform bitwise or shift operations with operands of the integral types.
 
   
-### Arithmetic Operators
+##### Arithmetic Operators
 These operators are used to perform basic mathematical operations, such as addition, subtraction, multiplication, division, and modulus.
 
 <img src="./img/AritOp.png" />
@@ -194,7 +206,7 @@ int divide = a / b;        //divide = 2
 int remainder = a % b;     //remainder = 0
 ```
 
-### Comparison Operators
+#### Comparison Operators
 These operators are used to compare values and return a Boolean value (true or false).
 
 <img src="./img/ComOp.png" />
@@ -208,7 +220,7 @@ bool greaterThan = (a > b);   //greaterThan = true
 bool lessThan = (a < b);      //lessThan = false
 ```
 
-### Assignment Operators
+#### Assignment Operators
 These operators are used to assign values to variables.
 
 <img src="./img/AssigOp.png" />
@@ -222,7 +234,7 @@ x /= 4;   // x is now 6  (equivalent to x = x / 4)
 x %= 5;   // x is now 1  (equivalent to x = x % 5)
 ```
 
-### Boolean logical Operators
+#### Boolean logical Operators
 These operators are used to combine logical expressions and return a Boolean value.
 
 <img src="./img/LoOp.png" />
@@ -235,7 +247,7 @@ bool resultOr = c1 || c2;    // resultOr = true
 bool resultNot = !c1;        // resultNot = false
 ```
 
-### Increment and Decrement Operators
+#### Increment and Decrement Operators
 These operators are used to increase or decrease the value of a variable by one unit.
 
 <img src="./img/InDeOp.png" />
@@ -246,19 +258,19 @@ x++;  // Increment: x is now 11
 x--;  // Decrement: x is now 10 again
 ```
 
-### Bitwise and shift Operators
+#### Bitwise and shift Operators
 These operators are used to perform operations at ***the bit level*** on ***binary representations*** of data.
 
-#### Why use Bitwise Operators?
+##### Why use Bitwise Operators?
 Bitwise operations were more prevalent in the past when computers had limited memory compared to contemporary systems.
 
 If you're working on embedded devices with memory limitations, bitwise operations remain highly relevant and valuable. It's essential to have a good understanding of them in such contexts.
 
-#### Why use a Byte?
+##### Why use a Byte?
 The smallest unit of addressable space that a CPU can reference is typically one byte. This means that the smallest amount of space a variable can occupy in memory is one byte.
 <img src="./img/byte.png"/>
 
-#### Why use the Binary System?
+##### Why use the Binary System?
 "Binary" is a numeral system that uses a base of 2. In the binary system, each digit or bit can have one of two possible values: 0 or 1. This contrasts with the decimal system (base-10), which we commonly use, where each digit can have one of ten possible values (0 through 9).
 
 <img src="./img/image.png"/>
@@ -267,7 +279,7 @@ In computing, binary is fundamental because computers use binary digits (bits) t
 
 ***Understanding binary is essential for understanding how computers store and process information at the lowest level.***
 
-##### Binary Representation
+###### Binary Representation
 Binary representation is used to represent numbers in base-2 format using only 0s and 1s. When we talk about a byte, we're referring to a group of 8 bits. Each bit in a byte can be either 0 or 1, which aligns perfectly with binary representation. 
 
 ***numeral system with a base of 2.***
@@ -301,7 +313,7 @@ Adding these together:
 <img src="./img/result.png" />
 So, the binary number 1101 is equal to the decimal number 13.
 
-#### Bitwise Operations Example
+###### Bitwise Operations Example
 <img src="./img/BitOp.png" />
 
 ```c#
@@ -327,13 +339,13 @@ int resultShiftLeft = a << 1;  // Left Shift: 00001010 (10)
 int resultShiftRight = a >> 1; // Right Shift: 00000010 (2)
 
 ```
-## Control Flow and Conditional Structures
+### Control Flow and Conditional Structures
 
 Control flow refers to the order in which the individual statements, instructions, or function calls of a program are executed. Conditional structures are programming constructs that allow decisions to be made within the code based on certain conditions. These conditions determine which block of code will be executed next.
 
 **Conditional Structures:**
 
-### If-else 
+#### If-else 
    The if-else statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false.
 
    ```c#
@@ -348,7 +360,7 @@ Control flow refers to the order in which the individual statements, instruction
    }
    ```
 
-### Switch-case
+#### Switch-case
    The switch-case statement provides a way to execute different blocks of code based on the value of an expression or variable.
 
    ```c#
@@ -378,7 +390,7 @@ Control flow refers to the order in which the individual statements, instruction
    
    Console.WriteLine("The result is: " + result);
    ```
-### Ternary operator
+#### Ternary operator
    The ternary operator is a shorthand version of an if-else statement and is used to assign a value to a variable based on a condition.
 
    ```c#
@@ -389,10 +401,10 @@ Control flow refers to the order in which the individual statements, instruction
 
 These conditional structures are essential for creating flexible and dynamic programs that can adapt their behavior based on different inputs or circumstances. They are fundamental tools for controlling the flow of execution in a program and implementing various decision-making logic.
 
-## Loops
+### Loops
 In C#, loops are used to repeat a block of code multiple times, enabling efficient handling of repetitive tasks and processing of data collections. They allow for precise control over program flow and are essential for implementing algorithms and automating tasks efficiently.
 
-### For Loop
+#### For Loop
 The for loop is used to execute a block of code a specified number of times.
    - **Structure**: 
      ```csharp
@@ -414,7 +426,7 @@ The for loop is used to execute a block of code a specified number of times.
      ```
    - **Common Use**: *Iterating over arrays, collections, or a range of values.*
 
-### While Loop
+#### While Loop
 The while loop executes a block of code as long as a specified condition is true.
    - **Structure**: 
      ```csharp
@@ -436,7 +448,7 @@ The while loop executes a block of code as long as a specified condition is true
      ```
    - **Common Use**: *Executing code based on a condition that may change during execution.*
 
-### Do-While Loop
+#### Do-While Loop
   The do-while loop is similar to a while loop, but it guarantees that the code inside the loop is executed at least once before the condition is checked.
   - **Structure**: 
      ```csharp
@@ -460,10 +472,10 @@ The while loop executes a block of code as long as a specified condition is true
      ```
    - **Common Use**: *Ensuring a block of code is executed at least once, regardless of the condition.*
 
-## Type Conversions
+### Type Conversions
 Type conversions in C# refer to the process of converting a value from one data type to another. There are two main types of conversions: implicit conversions and explicit conversions (casting).
 
-### Implicit Conversion
+#### Implicit Conversion
 Implicit conversion occurs automatically when there is no risk of data loss during the conversion. It's performed by the compiler without requiring any additional syntax. This type of conversion is typically used when converting smaller data types to larger ones.
 
 ```c#
@@ -474,7 +486,7 @@ double numDouble = numInt; // Implicit conversion from int to double
 **Use Case:**
 Implicit conversions are commonly used when assigning a value of a smaller data type to a larger data type, such as converting an integer to a floating-point number.
 
-### Explicit Conversion (Casting)
+#### Explicit Conversion (Casting)
 Explicit conversion, also known as casting, is a manual conversion process where the programmer explicitly specifies the desired target data type. This type of conversion is necessary when there's a risk of data loss or when converting from a larger data type to a smaller one.
 
 ```c#
@@ -484,216 +496,19 @@ int numInt = (int)numDouble; // Explicit conversion (casting) from double to int
 **Use Case:**
 Explicit conversions are used when converting from a larger data type to a smaller one, such as converting a floating-point number to an integer. It's also used when converting between data types that aren't implicitly convertible, such as converting between numerical and non-numerical types.
 
-## Non-Primitive Types
-Non-primitive types in C# are data types that are composed of primitive types or other non-primitive types. They include: 
+
+
+## 2. Object-Oriented Programming in C#
+
+### Non-Primitive Types
+Non-primitive types in C# are data types that are composed of primitive types or other non-primitive types. They include:
+- Classes
 - Arrays
 - Strings
 - Enumerations
-- Classes
 - Structs
 
-### Arrays
-Arrays are data structures that store a fixed-size sequential collection of elements of the same type.
-
-```c#
-int[] numbers = new int[5]; // Declaration and instantiation of an integer array
-numbers[0] = 1;
-numbers[1] = 2;
-// Accessing elements of the array
-Console.WriteLine(numbers[0]); // Output: 1
-Console.WriteLine(numbers[1]); // Output: 2
-
-int[] numbers = new int[5] {1,2,3,4,5} //Declaration and initiation of the array
-```
-Some methods that are frequently used to manipulate arrays in C# offer functionality such as copying, searching, sorting, and modifying array elements.
-
-1. **Length Property:**
-   - **Description:** Gets the total number of elements in the array.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 1, 2, 3, 4, 5 };
-     int length = numbers.Length; // length will be 5
-     ```
-
-2. **Copy Method:**
-   - **Description:** Copies a range of elements from an array starting at the specified source index and pastes them to another array starting at the specified destination index.
-   - **Example:**
-     ```csharp
-     int[] sourceArray = { 1, 2, 3 };
-     int[] destinationArray = new int[3];
-     Array.Copy(sourceArray, destinationArray, 3); // Copies all elements from sourceArray to destinationArray
-     ```
-
-3. **Clear Method:**
-   - **Description:** Sets a range of elements in the array to zero, false, or null, depending on the element type.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 1, 2, 3, 4, 5 };
-     Array.Clear(numbers, 0, numbers.Length); // Clears all elements in the numbers array
-     ```
-
-4. **IndexOf Method:**
-   - **Description:** Searches for the specified object and returns the index of its first occurrence within the entire array.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 1, 2, 3, 4, 5 };
-     int index = Array.IndexOf(numbers, 3); // index will be 2
-     ```
-
-5. **Reverse Method:**
-   - **Description:** Reverses the sequence of elements in the entire array.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 1, 2, 3, 4, 5 };
-     Array.Reverse(numbers); // numbers will be { 5, 4, 3, 2, 1 }
-     ```
-
-6. **Sort Method:**
-   - **Description:** Sorts the elements in an entire array using the IComparable implementation of each element of the array.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 5, 3, 1, 4, 2 };
-     Array.Sort(numbers); // numbers will be { 1, 2, 3, 4, 5 }
-     ```
-
-7. **Resize Method:**
-   - **Description:** Changes the size of the array to a specified new size.
-   - **Example:**
-     ```csharp
-     int[] numbers = { 1, 2, 3 };
-     Array.Resize(ref numbers, 5); // Resizes the numbers array to have a length of 5
-     ```
-
-### Strings
-Strings are sequences of characters used to represent text. In C#, strings are immutable, meaning their values cannot be changed after they are created.
-
-```c#
-string greeting = "Hello, world!"; // Declaration and initialization of a string
-Console.WriteLine(greeting); // Output: Hello, world!
-```
-Some methods that are frequently used to manipulate strings in C# offer functionality such as extracting substrings, changing casing, searching for substrings, splitting strings into substrings, and replacing substrings.
-
-1. **Length Property:**
-   - **Description:** Gets the number of characters in the current string.
-   - **Example:**
-     ```csharp
-     string str = "Hello, world!";
-     int length = str.Length; // length will be 13
-     ```
-
-2. **Substring Method:**
-   - **Description:** Retrieves a substring from this instance. The substring starts at a specified character position and has a specified length.
-   - **Example:**
-     ```csharp
-     string str = "Hello, world!";
-     string subStr = str.Substring(7, 5); // subStr will be "world"
-     ```
-
-3. **ToUpper Method:**
-   - **Description:** Returns a copy of this string converted to uppercase.
-   - **Example:**
-     ```csharp
-     string str = "hello";
-     string upperStr = str.ToUpper(); // upperStr will be "HELLO"
-     ```
-
-4. **ToLower Method:**
-   - **Description:** Returns a copy of this string converted to lowercase.
-   - **Example:**
-     ```csharp
-     string str = "HELLO";
-     string lowerStr = str.ToLower(); // lowerStr will be "hello"
-     ```
-
-5. **Contains Method:**
-   - **Description:** Returns a value indicating whether a specified substring occurs within this string.
-   - **Example:**
-     ```csharp
-     string str = "Hello, world!";
-     bool contains = str.Contains("world"); // contains will be true
-     ```
-
-6. **Split Method:**
-   - **Description:** Splits a string into substrings based on the characters in an array and returns an array of substrings.
-   - **Example:**
-     ```csharp
-     string str = "apple,banana,orange";
-     string[] fruits = str.Split(','); // fruits will be ["apple", "banana", "orange"]
-     ```
-
-7. **IndexOf Method:**
-   - **Description:** Reports the zero-based index of the first occurrence of a specified string within this instance.
-   - **Example:**
-     ```csharp
-     string str = "Hello, world!";
-     int index = str.IndexOf("world"); // index will be 7
-     ```
-
-8. **Replace Method:**
-   - **Description:** Returns a new string in which all occurrences of a specified substring in the current string are replaced with another specified substring.
-   - **Example:**
-     ```csharp
-     string str = "Hello, world!";
-     string newStr = str.Replace("world", "universe"); // newStr will be "Hello, universe!"
-     ```
-
-### Enumerations:
-Enumerations, or enums, are special value types that allow you to define named constants with a specific underlying type. Enumerations provide a way to create sets of related named constants, making code more readable and maintainable.
-
-```c#
-enum DaysOfWeek
-{
-    Sunday,
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday
-}
-
-DaysOfWeek today = DaysOfWeek.Monday;
-Console.WriteLine(today); // Output: Monday
-```
-Some methods of enums are frequently used to retrieve the name of a constant based on its value or to check if a given value or name exists in the enum.
-
-1. **GetName Method:**
-   - **Description:** Retrieves the name of the constant in the specified enumeration that has the specified value.
-   - **Example:**
-     ```csharp
-     enum DaysOfWeek
-     {
-         Sunday,
-         Monday,
-         Tuesday,
-         Wednesday,
-         Thursday,
-         Friday,
-         Saturday
-     }
-     
-     string day = Enum.GetName(typeof(DaysOfWeek), 1); // Returns "Monday"
-     ```
-
-2. **IsDefined Method:**
-   - **Description:** Returns a Boolean indicating whether a given integral value, or its name as a string, exists in the specified enumeration.
-   - **Example:**
-     ```csharp
-     enum DaysOfWeek
-     {
-         Sunday,
-         Monday,
-         Tuesday,
-         Wednesday,
-         Thursday,
-         Friday,
-         Saturday
-     }
-     
-     bool isDefined = Enum.IsDefined(typeof(DaysOfWeek), "Monday"); // Returns true
-     ```
-
-### Classes
+#### Classes
 Classes are reference types that serve as blueprints for creating objects. They encapsulate data for the object and define methods for manipulating that data. Classes support inheritance, encapsulation, and polymorphism, allowing for the creation of complex data structures and behavior.
 
 ```c#
@@ -818,7 +633,389 @@ These methods are fundamental for defining the behavior and functionality of cla
      int result = calc.Add(5, 3); // result will be 8
      ```
 
-### Structs
+#### Methods
+In object-oriented programming, a class acts as a blueprint or template for creating objects. Central to this blueprint are the methods the actionable components that define the behavior of the objects created from the class.
+
+Methods encapsulate functionality within a class, representing the actions or behaviors that objects of that class can perform. Each method typically performs a specific task or set of tasks, enabling objects to interact with each other and manipulate data.
+
+**Characteristics:**
+
+- **Name and Signature:** Each method has a unique name and signature, consisting of the method's name and its parameters, if any. This signature differentiates one method from another within the same class.
+    ```c#
+    public class MyClass
+        {
+            // Method with name 'MyMethod' and no parameters
+            public void MyMethod()
+            {
+                // Method implementation
+            }
+            
+            // Method with name 'Add' and two parameters of type int
+            public int Add(int a, int b)
+            {
+                // Method implementation
+                return a + b;
+            }
+        }
+    ```
+  
+- **Return Type:** Methods may return a value after performing their tasks, indicated by a return type such as int, string, or void if no value is returned.
+  ```c#
+    public class MyClass
+        {
+            // Method with return type int
+            public int Multiply(int a, int b)
+            {
+                // Method implementation
+                return a * b;
+            }
+            
+            // Method with no return type (void)
+            public void DisplayMessage(string message)
+            {
+                // Method implementation
+                Console.WriteLine(message);
+            }
+        }
+  ```
+  
+- **Parameters:** Methods may accept input parameters, enabling them to receive data necessary for their operation.
+  ```c#
+    public class MyClass
+        {
+            // Method with parameters
+            public int Subtract(int a, int b)
+            {
+                // Method implementation
+                return a - b;
+            }
+            
+            // Method with no parameters
+            public void Greet(string name)
+            {
+                // Method implementation
+                Console.WriteLine($"Hello, {name}!");
+            }
+        }
+
+  ```
+
+#### Access Modifiers
+
+In C#, various elements such as **methods, variables, constructors, and sometimes even classes**, come equipped with access modifiers. These modifiers, including `public`, `private`, `protected`, and `readonly`, dictate the visibility and accessibility of these elements from other classes. By employing access modifiers, developers can precisely control how their code interacts with other parts of the program, enhancing encapsulation and facilitating robust software design.
+
+##### Public Modifier
+The public access modifier makes a member accessible from any other class. It has the widest scope among all access modifiers and allows the member to be accessed from outside the defining class, including from other assemblies.
+```c#
+  // Public class accessible from anywhere
+  public class MyClass
+    {
+        // Public field accessible from anywhere
+        public string MyPublicField;
+
+        // Constructor with public access
+        public MyClass(int value)
+        {
+            MyPublicField = "value";
+        }
+
+        // Public method accessible from anywhere
+        public void MyPublicMethod()
+        {
+            // Method implementation
+        }
+    }
+ ```
+
+##### Private Modifier
+The private access modifier restricts access to the member to within the same class or struct. It is the most restrictive access level and is typically used to hide implementation details.
+```c#
+    public class MyClass
+    {
+        // Private field accessible only within the class
+        private int myPrivateField;
+        // Private method accessible only within the class
+        private void MyPrivateMethod()
+        {
+            // Method implementation
+        }
+    }
+```
+##### Protected Modifier
+The protected access modifier allows access to the member within the same class or by derived classes. It is commonly used to encapsulate implementation details and provide access to derived classes for overriding or extending functionality.
+```c#
+    public class MyClass
+    {
+        // Protected field accessible within the class and derived classes
+        protected int protectedField;
+    }
+
+    public class MyDerivedClass : MyClass
+    {
+        // Protected method accessible within the class and derived classes
+        protected void AccessProtectedField()
+        {
+            protectedField = 10; // Accessing protected field from the base class
+        }
+    }
+```
+##### Internal Modifier
+The internal access modifier limits access to the member to within the same assembly. Members marked as internal can be accessed from any class in the same assembly but not from classes in external assemblies.
+```c#
+    // Internal class accessible within the same assembly
+    internal class MyInternalClass
+    {
+        // Internal field accessible within the same assembly
+        internal int internalField;
+        // Internal method accessible within the same assembly
+        internal void InternalMethod()
+        {
+            // Method implementation
+        }
+    }
+```
+##### Internal Protected Modifier
+The protected internal access modifier combines the behavior of both protected and internal. It allows access to the member within the same assembly and by derived classes, regardless of the assembly in which they reside.
+```c#
+    public class MyClass
+    {
+        // Protected internal field accessible within the same assembly and by derived classes
+        protected internal int protectedInternalField;
+    }
+
+    internal class MyDerivedClass : MyClass
+    {
+        // Protected internal method accessible within the same assembly and by derived classes
+        protected internal void AccessProtectedInternalField()
+        {
+            protectedInternalField = 20; // Accessing protected internal field
+        }
+    }
+```
+
+##### Readonly Modifier
+The readonly modifier can be applied to fields and indicates that the field's value can only be assigned once, either when it's declared or in a constructor. Once initialized, the value of a readonly field cannot be changed.
+```c#
+    public class MyClass
+    {
+        // Readonly field can only be assigned once, either when declared or in constructor
+        public readonly int ReadonlyField;
+
+        public MyClass(int value)
+        {
+            ReadonlyField = value; // Assigning value in constructor
+        }
+
+        // Readonly method cannot be overridden
+        public readonly void ReadonlyMethod()
+        {
+            Console.WriteLine("Readonly method called.");
+        }
+    }
+```
+
+#### Arrays
+Arrays are data structures that store a fixed-size sequential collection of elements of the same type.
+
+```c#
+int[] numbers = new int[5]; // Declaration and instantiation of an integer array
+numbers[0] = 1;
+numbers[1] = 2;
+// Accessing elements of the array
+Console.WriteLine(numbers[0]); // Output: 1
+Console.WriteLine(numbers[1]); // Output: 2
+
+int[] numbers = new int[5] {1,2,3,4,5} //Declaration and initiation of the array
+```
+Some methods that are frequently used to manipulate arrays in C# offer functionality such as copying, searching, sorting, and modifying array elements.
+
+1. **Length Property:**
+   - **Description:** Gets the total number of elements in the array.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 1, 2, 3, 4, 5 };
+     int length = numbers.Length; // length will be 5
+     ```
+
+2. **Copy Method:**
+   - **Description:** Copies a range of elements from an array starting at the specified source index and pastes them to another array starting at the specified destination index.
+   - **Example:**
+     ```csharp
+     int[] sourceArray = { 1, 2, 3 };
+     int[] destinationArray = new int[3];
+     Array.Copy(sourceArray, destinationArray, 3); // Copies all elements from sourceArray to destinationArray
+     ```
+
+3. **Clear Method:**
+   - **Description:** Sets a range of elements in the array to zero, false, or null, depending on the element type.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 1, 2, 3, 4, 5 };
+     Array.Clear(numbers, 0, numbers.Length); // Clears all elements in the numbers array
+     ```
+
+4. **IndexOf Method:**
+   - **Description:** Searches for the specified object and returns the index of its first occurrence within the entire array.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 1, 2, 3, 4, 5 };
+     int index = Array.IndexOf(numbers, 3); // index will be 2
+     ```
+
+5. **Reverse Method:**
+   - **Description:** Reverses the sequence of elements in the entire array.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 1, 2, 3, 4, 5 };
+     Array.Reverse(numbers); // numbers will be { 5, 4, 3, 2, 1 }
+     ```
+
+6. **Sort Method:**
+   - **Description:** Sorts the elements in an entire array using the IComparable implementation of each element of the array.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 5, 3, 1, 4, 2 };
+     Array.Sort(numbers); // numbers will be { 1, 2, 3, 4, 5 }
+     ```
+
+7. **Resize Method:**
+   - **Description:** Changes the size of the array to a specified new size.
+   - **Example:**
+     ```csharp
+     int[] numbers = { 1, 2, 3 };
+     Array.Resize(ref numbers, 5); // Resizes the numbers array to have a length of 5
+     ```
+
+#### Strings
+Strings are sequences of characters used to represent text. In C#, strings are immutable, meaning their values cannot be changed after they are created.
+
+```c#
+string greeting = "Hello, world!"; // Declaration and initialization of a string
+Console.WriteLine(greeting); // Output: Hello, world!
+```
+Some methods that are frequently used to manipulate strings in C# offer functionality such as extracting substrings, changing casing, searching for substrings, splitting strings into substrings, and replacing substrings.
+
+1. **Length Property:**
+   - **Description:** Gets the number of characters in the current string.
+   - **Example:**
+     ```csharp
+     string str = "Hello, world!";
+     int length = str.Length; // length will be 13
+     ```
+
+2. **Substring Method:**
+   - **Description:** Retrieves a substring from this instance. The substring starts at a specified character position and has a specified length.
+   - **Example:**
+     ```csharp
+     string str = "Hello, world!";
+     string subStr = str.Substring(7, 5); // subStr will be "world"
+     ```
+
+3. **ToUpper Method:**
+   - **Description:** Returns a copy of this string converted to uppercase.
+   - **Example:**
+     ```csharp
+     string str = "hello";
+     string upperStr = str.ToUpper(); // upperStr will be "HELLO"
+     ```
+
+4. **ToLower Method:**
+   - **Description:** Returns a copy of this string converted to lowercase.
+   - **Example:**
+     ```csharp
+     string str = "HELLO";
+     string lowerStr = str.ToLower(); // lowerStr will be "hello"
+     ```
+
+5. **Contains Method:**
+   - **Description:** Returns a value indicating whether a specified substring occurs within this string.
+   - **Example:**
+     ```csharp
+     string str = "Hello, world!";
+     bool contains = str.Contains("world"); // contains will be true
+     ```
+
+6. **Split Method:**
+   - **Description:** Splits a string into substrings based on the characters in an array and returns an array of substrings.
+   - **Example:**
+     ```csharp
+     string str = "apple,banana,orange";
+     string[] fruits = str.Split(','); // fruits will be ["apple", "banana", "orange"]
+     ```
+
+7. **IndexOf Method:**
+   - **Description:** Reports the zero-based index of the first occurrence of a specified string within this instance.
+   - **Example:**
+     ```csharp
+     string str = "Hello, world!";
+     int index = str.IndexOf("world"); // index will be 7
+     ```
+
+8. **Replace Method:**
+   - **Description:** Returns a new string in which all occurrences of a specified substring in the current string are replaced with another specified substring.
+   - **Example:**
+     ```csharp
+     string str = "Hello, world!";
+     string newStr = str.Replace("world", "universe"); // newStr will be "Hello, universe!"
+     ```
+
+#### Enumerations
+Enumerations, or enums, are special value types that allow you to define named constants with a specific underlying type. Enumerations provide a way to create sets of related named constants, making code more readable and maintainable.
+
+```c#
+enum DaysOfWeek
+{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+}
+
+DaysOfWeek today = DaysOfWeek.Monday;
+Console.WriteLine(today); // Output: Monday
+```
+Some methods of enums are frequently used to retrieve the name of a constant based on its value or to check if a given value or name exists in the enum.
+
+1. **GetName Method:**
+   - **Description:** Retrieves the name of the constant in the specified enumeration that has the specified value.
+   - **Example:**
+     ```csharp
+     enum DaysOfWeek
+     {
+         Sunday,
+         Monday,
+         Tuesday,
+         Wednesday,
+         Thursday,
+         Friday,
+         Saturday
+     }
+     
+     string day = Enum.GetName(typeof(DaysOfWeek), 1); // Returns "Monday"
+     ```
+
+2. **IsDefined Method:**
+   - **Description:** Returns a Boolean indicating whether a given integral value, or its name as a string, exists in the specified enumeration.
+   - **Example:**
+     ```csharp
+     enum DaysOfWeek
+     {
+         Sunday,
+         Monday,
+         Tuesday,
+         Wednesday,
+         Thursday,
+         Friday,
+         Saturday
+     }
+     
+     bool isDefined = Enum.IsDefined(typeof(DaysOfWeek), "Monday"); // Returns true
+     ```
+
+#### Structs
 Structs are similar to classes but are value types rather than reference types. They are typically used for small, lightweight objects that have a short lifetime and do not require inheritance or polymorphism.
 
 ```c#
@@ -946,12 +1143,12 @@ Srtucts can contain methods like: constructors, equality comparison methods, has
      int area = rect.CalculateArea(); // area will be 15
      ```
 
-## Input and Output Operations in C#
+### Input and Output Operations in C#
 **System.IO Namespace**
 
 In C#, the `System.IO` namespace provides classes for performing various I/O operations, including reading from and writing to files, working with directories, and more. Here are some commonly used classes and methods:
 
-### File Operations:
+#### File Operations:
 
 - **File.Exists(string path):** Checks if a file exists at the specified path.
 ```c#
@@ -1208,7 +1405,7 @@ class Program
 }
 ```
 
-### Path Operations:
+#### Path Operations:
 
 - **Path.Combine(params string[] paths):** Combines strings into a path.
 ```c#
@@ -1284,7 +1481,7 @@ class Program
 }
 ```
 
-### Stream-based Operations:
+#### Stream-based Operations:
 
 - **StreamReader:** Reads characters from a stream.
 ```c#
@@ -1379,8 +1576,8 @@ class Program
     }
 }
 ```
-## Other Functionalities
-### DateTime and TimeSpan
+### Other Functionalities
+#### DateTime and TimeSpan
 DateTime is a struct in C# that represents a specific point in time, including both date and time components. It's commonly used for tasks involving date and time calculations, such as scheduling, time tracking, and event handling. TimeSpan, also a struct, represents a duration of time, such as a number of days, hours, minutes, etc.
 ```c#
 using System;
@@ -1437,7 +1634,7 @@ class Program
     }
 }
 ```
-### StringBuilder
+#### StringBuilder
 StringBuilder is a class in C# that provides an efficient way to manipulate strings, especially when dealing with multiple string concatenations. Unlike the String class, which creates a new string object each time you modify it, StringBuilder allows you to modify a single string buffer without creating new objects, leading to better performance, especially for large strings or many concatenations.
 ```c#
 using System;
@@ -1461,5 +1658,5 @@ class Program
     }
 }
 ```
-## Summary and conclusions
+### Summary and conclusions
 This documentation provides a condensed overview of fundamental C# concepts for beginners. It covers primitive types, variables, operators, control flow structures, loops, type conversions, non-primitive types, input/output operations, and handling dates and times. By understanding these concepts, beginners gain a solid understanding of C# programming essentials, enabling them to write basic programs and build a foundation for further learning and exploration in the language.

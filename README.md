@@ -20,6 +20,11 @@
         - [Why use the Binary System?](#why-use-the-binary-system)
           - [Binary Representation](#binary-representation)
           - [Bitwise Operations Example](#bitwise-operations-example)
+    - [Non-Primitive Types](#non-primitive-types)
+      - [Arrays](#arrays)
+      - [Strings](#strings)
+      - [Enumerations](#enumerations)
+      - [Structs](#structs)
     - [Control Flow and Conditional Structures](#control-flow-and-conditional-structures)
       - [If-else](#if-else)
       - [Switch-case](#switch-case)
@@ -32,17 +37,13 @@
       - [Implicit Conversion](#implicit-conversion)
       - [Explicit Conversion (Casting)](#explicit-conversion-casting)
   - [2. Object-Oriented Programming in C#](#2-object-oriented-programming-in-c)
-    - [Non-Primitive Types](#non-primitive-types)
-      - [Arrays](#arrays)
-      - [Strings](#strings)
-      - [Enumerations](#enumerations)
-      - [Structs](#structs)
     - [Classes and Objects](#classes-and-objects)
       - [Class Structure](#class-structure)
       - [Class Coupling](#class-coupling)
       - [Objects](#objects)
     - [Inheritance](#inheritance)
     - [Polymorphism](#polymorphism)
+    - [Abstraction](#abstraction)
     - [Encapsulation](#encapsulation)
     - [Methods](#methods)
     - [Access Modifiers](#access-modifiers)
@@ -52,6 +53,7 @@
       - [Internal Modifier](#internal-modifier)
       - [Internal Protected Modifier](#internal-protected-modifier)
       - [Readonly Modifier](#readonly-modifier)
+  - [3. System.IO in C#](#3-systemio-in-c)
     - [Input and Output Operations in C#](#input-and-output-operations-in-c)
       - [File Operations:](#file-operations)
     - [Directory Operations:](#directory-operations)
@@ -347,168 +349,6 @@ int resultShiftLeft = a << 1;  // Left Shift: 00001010 (10)
 int resultShiftRight = a >> 1; // Right Shift: 00000010 (2)
 
 ```
-### Control Flow and Conditional Structures
-
-Control flow refers to the order in which the individual statements, instructions, or function calls of a program are executed. Conditional structures are programming constructs that allow decisions to be made within the code based on certain conditions. These conditions determine which block of code will be executed next.
-
-**Conditional Structures:**
-
-#### If-else 
-   The if-else statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false.
-
-   ```c#
-   int age = 18;
-   if (age >= 18)
-   {
-       Console.WriteLine("You are an adult.");
-   }
-   else
-   {
-       Console.WriteLine("You are a minor.");
-   }
-   ```
-
-#### Switch-case
-   The switch-case statement provides a way to execute different blocks of code based on the value of an expression or variable.
-
-   ```c#
-   char operation = '*';
-   double num1 = 10;
-   double num2 = 5;
-   double result = 0;
-   
-   switch (operation)
-   {
-       case '+':
-           result = num1 + num2;
-           break;
-       case '-':
-           result = num1 - num2;
-           break;
-       case '*':
-           result = num1 * num2;
-           break;
-       case '/':
-           result = num1 / num2;
-           break;
-       default:
-           Console.WriteLine("Invalid operation.");
-           break;
-   }
-   
-   Console.WriteLine("The result is: " + result);
-   ```
-#### Ternary operator
-   The ternary operator is a shorthand version of an if-else statement and is used to assign a value to a variable based on a condition.
-
-   ```c#
-   int number = 10;
-   string message = (number % 2 == 0) ? "It's even" : "It's odd";
-   Console.WriteLine(message);
-   ```
-
-These conditional structures are essential for creating flexible and dynamic programs that can adapt their behavior based on different inputs or circumstances. They are fundamental tools for controlling the flow of execution in a program and implementing various decision-making logic.
-
-### Loops
-In C#, loops are used to repeat a block of code multiple times, enabling efficient handling of repetitive tasks and processing of data collections. They allow for precise control over program flow and are essential for implementing algorithms and automating tasks efficiently.
-
-#### For Loop
-The for loop is used to execute a block of code a specified number of times.
-   - **Structure**: 
-     ```csharp
-     for (initialization; condition; iteration)
-     {
-         // code to be executed
-     }
-     ```
-   - **Functionality**: 
-     - Initialization: Executes once at the beginning of the loop.
-     - Condition: Checked before each iteration. If true, the loop continues; otherwise, it exits.
-     - Iteration: Executes after each iteration of the loop.
-   - **Example**:
-     ```csharp
-     for (int i = 0; i < 5; i++)
-     {
-         Console.WriteLine(i);
-     }
-     ```
-   - **Common Use**: *Iterating over arrays, collections, or a range of values.*
-
-#### While Loop
-The while loop executes a block of code as long as a specified condition is true.
-   - **Structure**: 
-     ```csharp
-     while (condition)
-     {
-         // code to be executed
-     }
-     ```
-   - **Functionality**: 
-     - The condition is checked before each iteration. If true, the loop continues; otherwise, it exits.
-   - **Example**:
-     ```csharp
-     int num = 0;
-     while (num < 5)
-     {
-         Console.WriteLine(num);
-         num++;
-     }
-     ```
-   - **Common Use**: *Executing code based on a condition that may change during execution.*
-
-#### Do-While Loop
-  The do-while loop is similar to a while loop, but it guarantees that the code inside the loop is executed at least once before the condition is checked.
-  - **Structure**: 
-     ```csharp
-     do
-     {
-         // code to be executed
-     } while (condition);
-     ```
-   - **Functionality**: 
-
-    The code inside the loop is executed once before checking the condition. If true, the loop continues; otherwise, it exits.
-    **Example**:
-    
-     ```c#
-     int num = 0;
-     do
-     {
-         Console.WriteLine(num);
-         num++;
-     } while (num < 5);
-     ```
-   - **Common Use**: *Ensuring a block of code is executed at least once, regardless of the condition.*
-
-### Type Conversions
-Type conversions in C# refer to the process of converting a value from one data type to another. There are two main types of conversions: implicit conversions and explicit conversions (casting).
-
-#### Implicit Conversion
-Implicit conversion occurs automatically when there is no risk of data loss during the conversion. It's performed by the compiler without requiring any additional syntax. This type of conversion is typically used when converting smaller data types to larger ones.
-
-```c#
-int numInt = 10;
-double numDouble = numInt; // Implicit conversion from int to double
-```
-
-**Use Case:**
-Implicit conversions are commonly used when assigning a value of a smaller data type to a larger data type, such as converting an integer to a floating-point number.
-
-#### Explicit Conversion (Casting)
-Explicit conversion, also known as casting, is a manual conversion process where the programmer explicitly specifies the desired target data type. This type of conversion is necessary when there's a risk of data loss or when converting from a larger data type to a smaller one.
-
-```c#
-double numDouble = 10.5;
-int numInt = (int)numDouble; // Explicit conversion (casting) from double to int
-```
-**Use Case:**
-Explicit conversions are used when converting from a larger data type to a smaller one, such as converting a floating-point number to an integer. It's also used when converting between data types that aren't implicitly convertible, such as converting between numerical and non-numerical types.
-
-
-
-
-
-## 2. Object-Oriented Programming in C#
 
 ### Non-Primitive Types
 Non-primitive types in C# are data types that are composed of primitive types or other non-primitive types. They include:
@@ -846,8 +686,175 @@ Structs can contain methods like: constructors, equality comparison methods, has
      int area = rect.CalculateArea(); // area will be 15
      ```
 
+### Control Flow and Conditional Structures
+
+Control flow refers to the order in which the individual statements, instructions, or function calls of a program are executed. Conditional structures are programming constructs that allow decisions to be made within the code based on certain conditions. These conditions determine which block of code will be executed next.
+
+**Conditional Structures:**
+
+#### If-else 
+   The if-else statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false.
+
+   ```c#
+   int age = 18;
+   if (age >= 18)
+   {
+       Console.WriteLine("You are an adult.");
+   }
+   else
+   {
+       Console.WriteLine("You are a minor.");
+   }
+   ```
+
+#### Switch-case
+   The switch-case statement provides a way to execute different blocks of code based on the value of an expression or variable.
+
+   ```c#
+   char operation = '*';
+   double num1 = 10;
+   double num2 = 5;
+   double result = 0;
+   
+   switch (operation)
+   {
+       case '+':
+           result = num1 + num2;
+           break;
+       case '-':
+           result = num1 - num2;
+           break;
+       case '*':
+           result = num1 * num2;
+           break;
+       case '/':
+           result = num1 / num2;
+           break;
+       default:
+           Console.WriteLine("Invalid operation.");
+           break;
+   }
+   
+   Console.WriteLine("The result is: " + result);
+   ```
+#### Ternary operator
+   The ternary operator is a shorthand version of an if-else statement and is used to assign a value to a variable based on a condition.
+
+   ```c#
+   int number = 10;
+   string message = (number % 2 == 0) ? "It's even" : "It's odd";
+   Console.WriteLine(message);
+   ```
+
+These conditional structures are essential for creating flexible and dynamic programs that can adapt their behavior based on different inputs or circumstances. They are fundamental tools for controlling the flow of execution in a program and implementing various decision-making logic.
+
+### Loops
+In C#, loops are used to repeat a block of code multiple times, enabling efficient handling of repetitive tasks and processing of data collections. They allow for precise control over program flow and are essential for implementing algorithms and automating tasks efficiently.
+
+#### For Loop
+The for loop is used to execute a block of code a specified number of times.
+   - **Structure**: 
+     ```csharp
+     for (initialization; condition; iteration)
+     {
+         // code to be executed
+     }
+     ```
+   - **Functionality**: 
+     - Initialization: Executes once at the beginning of the loop.
+     - Condition: Checked before each iteration. If true, the loop continues; otherwise, it exits.
+     - Iteration: Executes after each iteration of the loop.
+   - **Example**:
+     ```csharp
+     for (int i = 0; i < 5; i++)
+     {
+         Console.WriteLine(i);
+     }
+     ```
+   - **Common Use**: *Iterating over arrays, collections, or a range of values.*
+
+#### While Loop
+The while loop executes a block of code as long as a specified condition is true.
+   - **Structure**: 
+     ```csharp
+     while (condition)
+     {
+         // code to be executed
+     }
+     ```
+   - **Functionality**: 
+     - The condition is checked before each iteration. If true, the loop continues; otherwise, it exits.
+   - **Example**:
+     ```csharp
+     int num = 0;
+     while (num < 5)
+     {
+         Console.WriteLine(num);
+         num++;
+     }
+     ```
+   - **Common Use**: *Executing code based on a condition that may change during execution.*
+
+#### Do-While Loop
+  The do-while loop is similar to a while loop, but it guarantees that the code inside the loop is executed at least once before the condition is checked.
+  - **Structure**: 
+     ```csharp
+     do
+     {
+         // code to be executed
+     } while (condition);
+     ```
+   - **Functionality**: 
+
+    The code inside the loop is executed once before checking the condition. If true, the loop continues; otherwise, it exits.
+    **Example**:
+    
+     ```c#
+     int num = 0;
+     do
+     {
+         Console.WriteLine(num);
+         num++;
+     } while (num < 5);
+     ```
+   - **Common Use**: *Ensuring a block of code is executed at least once, regardless of the condition.*
+
+### Type Conversions
+Type conversions in C# refer to the process of converting a value from one data type to another. There are two main types of conversions: implicit conversions and explicit conversions (casting).
+
+#### Implicit Conversion
+Implicit conversion occurs automatically when there is no risk of data loss during the conversion. It's performed by the compiler without requiring any additional syntax. This type of conversion is typically used when converting smaller data types to larger ones.
+
+```c#
+int numInt = 10;
+double numDouble = numInt; // Implicit conversion from int to double
+```
+
+**Use Case:**
+Implicit conversions are commonly used when assigning a value of a smaller data type to a larger data type, such as converting an integer to a floating-point number.
+
+#### Explicit Conversion (Casting)
+Explicit conversion, also known as casting, is a manual conversion process where the programmer explicitly specifies the desired target data type. This type of conversion is necessary when there's a risk of data loss or when converting from a larger data type to a smaller one.
+
+```c#
+double numDouble = 10.5;
+int numInt = (int)numDouble; // Explicit conversion (casting) from double to int
+```
+**Use Case:**
+Explicit conversions are used when converting from a larger data type to a smaller one, such as converting a floating-point number to an integer. It's also used when converting between data types that aren't implicitly convertible, such as converting between numerical and non-numerical types.
+
+
+
+
+
+## 2. Object-Oriented Programming in C#
+
+<img src="./img/OOP.jpeg">
+
 ### Classes and Objects
 Classes are reference types that serve as blueprints for creating objects. They encapsulate data for the object and define methods for manipulating that data. Classes support inheritance, encapsulation, and polymorphism, allowing for the creation of complex data structures and behavior.
+
+<img src="./img/clsob.png">
 
 ```c#
 class Person
@@ -1094,6 +1101,8 @@ Objects are instances of classes. They encapsulate both data and behavior define
 
 Inheritance is a fundamental concept in object-oriented programming that allows a class (the child or derived class) to inherit properties and behavior from another class (the parent or base class). It promotes code reuse and enables the creation of hierarchical relationships between classes.
 
+  <img src="./img/Inh.png">
+
 - **Base Class:** Also known as the parent or superclass, it's the class whose members are inherited by another class.
 - **Derived Class:** Also known as the child or subclass, it's the class that inherits from another class.
 - **Syntax:**
@@ -1128,6 +1137,8 @@ Inheritance is a fundamental concept in object-oriented programming that allows 
 
 Polymorphism is the ability of objects to take on multiple forms. In the context of inheritance, it allows a method in a derived class to have the same name as a method in its base class but with different behavior. This enables methods to be called on objects of different classes through a common interface.
 
+<img src="./img/poly.jpg">
+
 - **Types:**
   1. **Compile-Time Polymorphism (Method Overloading):** Occurs when multiple methods in the same class have the same name but different parameters.
   2. **Run-Time Polymorphism (Method Overriding):** Occurs when a method in a derived class has the same signature as a method in its base class, and the derived class provides its own implementation of that method.
@@ -1150,10 +1161,55 @@ Polymorphism is the ability of objects to take on multiple forms. In the context
       }
   }
   ```
+### Abstraction
+Abstraction refers to the ability to focus on the essential aspects of an object while hiding the non-essential or irrelevant details. Simply put, it reduces complexity for the average user. It is mainly used to solve problems at the design level, mainly the conceptual part.
+
+<img src="">
+
+- **Benefits:**
+  1. **Simplicity and Manageability:** Abstraction allows complex systems to be simplified by focusing on essential features, making it easier to understand and manage the codebase.
+  2. **Encapsulation of Complexity:** By hiding implementation details, abstraction encapsulates the complexity of objects, reducing cognitive load and promoting modular design.
+  3. **Enhanced Reusability:** Abstraction promotes reusable code components by creating generalized interfaces that can be applied across different contexts, saving time and effort in development.
+- **Example:**
+  ```csharp
+    class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public int PublicationYear { get; set; }
+        
+        public void DisplayDetails()
+        {
+            Console.WriteLine($"Title: {Title}, Author: {Author}, Publication Year: {PublicationYear}");
+        }
+    }
+
+    class Member
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Email { get; set; }
+        
+        public void DisplayInformation()
+        {
+            Console.WriteLine($"Name: {Name}, Age: {Age}, Email: {Email}");
+        }
+    }
+
+    class Library
+    {
+        private List<Book> borrowedBooks = new List<Book>();
+        private List<Member> registeredMembers = new List<Member>();
+        
+        // Methods for borrowing books, registering members, etc.
+    }
+  ```
 
 ### Encapsulation
 
-Encapsulation is the bundling of data (fields or properties) and methods (functions or procedures) that operate on the data into a single unit, typically a class. It hides the internal state of an object and only exposes the necessary functionality through well-defined interfaces. Encapsulation helps in achieving data abstraction, information hiding, and modular programming.
+Encapsulation is the process of wrapping of data (fields or properties) and methods (functions or procedures) that operate on the data into a single unit, typically a class. It hides the internal state of an object and only exposes the necessary functionality through well-defined interfaces. Encapsulation helps in achieving data abstraction, information hiding, and modular programming.
+
+<img src="./img/enca.jpeg">
 
 - **Benefits:**
   1. **Data Hiding:** Encapsulation allows the internal state of an object to be hidden from outside interference, preventing unauthorized access and modification.
@@ -1367,7 +1423,7 @@ The readonly modifier can be applied to fields and indicates that the field's va
         }
     }
 ```
-
+## 3. System.IO in C#
 ### Input and Output Operations in C#
 **System.IO Namespace**
 
@@ -1884,4 +1940,4 @@ class Program
 }
 ```
 ### Summary and conclusions
-This documentation provides a condensed overview of fundamental C# concepts for beginners. It covers primitive types, variables, operators, control flow structures, loops, type conversions, non-primitive types, input/output operations, and handling dates and times. By understanding these concepts, beginners gain a solid understanding of C# programming essentials, enabling them to write basic programs and build a foundation for further learning and exploration in the language.
+This documentation provides a condensed overview of fundamental C# concepts for beginners. It covers primitive types, variables, operators, control flow structures, loops, type conversions, non-primitive types, input/output operations, and handling dates and times. By understanding these concepts, beginners gain a solid understanding of C# programming essentials, enabling them to write basic programs and build a foundation for further learning and exploration in the languag

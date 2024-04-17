@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.atatus.com/glossary/encapsulation/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encapsulation: Definition, Types, How to Hide Data and More</title>
+    <link rel="stylesheet" href="./enca_files/screen.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./enca_files/css2" rel="stylesheet">
+
+    <script>
+        if (localStorage.getItem('alto_dark') == 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+    <meta name="description" content="The process of wrapping data and functions that perform actions on the data into a single entity is known as encapsulation.">
+    <link rel="icon" href="https://www.atatus.com/glossary/favicon.png" type="image/png">
+    <link rel="canonical" href="https://www.atatus.com/glossary/encapsulation/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://www.atatus.com/glossary/encapsulation/amp/">
+    
+    <meta property="og:site_name" content="DevOps and Software Engineering Glossary Terms | Atatus">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Encapsulation: Definition, Types, How to Hide Data and More">
+    <meta property="og:description" content="The process of wrapping data and functions that perform actions on the data into a single entity is known as encapsulation. A single unit is referred to as a class.">
+    <meta property="og:url" content="https://www.atatus.com/glossary/encapsulation/">
+    <meta property="og:image" content="https://www.atatus.com/glossary/content/images/2021/08/Encapsulation.jpeg">
+    <meta property="article:published_time" content="2021-08-16T04:09:56.000Z">
+    <meta property="article:modified_time" content="2021-08-16T04:09:56.000Z">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Encapsulation: Definition, Types, How to Hide Data and More">
+    <meta name="twitter:description" content="The process of wrapping data and functions that perform actions on the data into a single entity is known as encapsulation. A single unit is referred to as a class.">
+    <meta name="twitter:url" content="https://www.atatus.com/glossary/encapsulation/">
+    <meta name="twitter:image" content="https://www.atatus.com/glossary/content/images/2021/08/Encapsulation.jpeg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Janani">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="">
+    <meta name="twitter:site" content="@ghost">
+    <meta name="twitter:creator" content="@A_K_Janani">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1000">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "DevOps and Software Engineering Glossary Terms | Atatus",
+        "url": "https://www.atatus.com/glossary/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.atatus.com/glossary/content/images/2021/08/logo.svg",
+            "width": 244,
+            "height": 50
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Janani",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://www.atatus.com/glossary/content/images/2021/05/Mini-me.jpg",
+            "width": 1420,
+            "height": 1420
+        },
+        "url": "https://www.atatus.com/glossary/author/janani/",
+        "sameAs": [
+            "https://twitter.com/A_K_Janani"
+        ]
+    },
+    "headline": "Encapsulation: Definition, Types, How to Hide Data and More",
+    "url": "https://www.atatus.com/glossary/encapsulation/",
+    "datePublished": "2021-08-16T04:09:56.000Z",
+    "dateModified": "2021-08-16T04:09:56.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.atatus.com/glossary/content/images/2021/08/Encapsulation.jpeg",
+        "width": 2000,
+        "height": 1000
+    },
+    "description": "The process of wrapping data and functions that perform actions on the data into a single entity is known as encapsulation. A single unit is referred to as a class.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.atatus.com/glossary/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.16">
+    <link rel="alternate" type="application/rss+xml" title="DevOps and Software Engineering Glossary Terms | Atatus" href="https://www.atatus.com/glossary/rss/">
+    <script defer="" src="./enca_files/portal.min.js.download" data-ghost="https://www.atatus.com/glossary/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./enca_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QPMQ1KJ8HH');
+</script>
+
+<link rel="stylesheet" href="./enca_files/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style type="text/css" media="screen">
+    .post-full-content pre strong {
+        color: white;
+    }
+    .post-full-content pre {
+        line-height: 1;
+    }
+    .post-full-content pre code {
+        white-space: pre-wrap;
+        hyphens: auto;
+        line-height: 0.7;
+        font-size: 0.7em;
+    }
+</style><style>:root {--ghost-accent-color: #0055dc;}</style>
+<style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body class="post-template tag-hash-e">
+    <div class="site">
+        <header class="site-header header-container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="burger hidden-lg hidden-xl"></div>
+            <a class="logo" href="https://www.atatus.com/glossary">
+        <img class="logo-image" src="./enca_files/logo.svg" alt="DevOps and Software Engineering Glossary Terms | Atatus">
+</a>            <div class="sep hidden-xs hidden-sm hidden-sm"></div>
+                <nav class="main-menu hidden-xs hidden-sm hidden-md">
+                    <ul class="nav-list u-plain-list">
+        <li class="menu-item menu-item-home"><a class="menu-item-link" href="https://www.atatus.com/">Home</a></li>
+        <li class="menu-item menu-item-blog"><a class="menu-item-link" href="https://www.atatus.com/blog/">Blog</a></li>
+        <li class="menu-item menu-item-glossary"><a class="menu-item-link" href="https://www.atatus.com/glossary/">Glossary</a></li>
+        <li class="menu-item menu-item-apm"><a class="menu-item-link" href="https://www.atatus.com/application-monitoring/features">APM</a></li>
+        <li class="menu-item menu-item-rum"><a class="menu-item-link" href="https://www.atatus.com/real-user-monitoring/features">RUM</a></li>
+        <li class="menu-item menu-item-logs"><a class="menu-item-link" href="https://www.atatus.com/logs-monitoring/features">Logs</a></li>
+        <li class="menu-item menu-item-pricing"><a class="menu-item-link" href="https://www.atatus.com/pricing">Pricing</a></li>
+</ul>
+                </nav>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav-list u-plain-list">
+                <li class="menu-item hidden-xs hidden-sm hidden-sm"><a class="menu-item-link" href="https://www.atatus.com/login">Login</a></li>
+                <li class="menu-item"><a class="menu-item-link free-trial-btn" href="https://www.atatus.com/signup">Free Trial</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+
+</div></header>        <div class="site-content">
+            
+<div class="content-area">
+    <main class="site-main">
+        <div class="container large">
+            <div class="breadcrumb">
+                <div class="navigation-item navigation-previous">
+                    <a class="navigation-item-link button-arrow button-arrow-left" href="https://www.atatus.com/glossary/">
+                        <i class="button-arrow-icon icon icon-arrow-left"></i> Back to Glossary
+                    </a>
+                </div>
+            </div>
+        </div>
+            <article class="post tag-hash-e single-post">
+                <header class="post-header big-title container medium">
+        <h1 class="post-title">Encapsulation</h1>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-08-16">
+                            Aug 16, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    6 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        
+                    </span>
+            </div>
+</header>                    <div class="post-media container large">
+        <div class="u-placeholder horizontal">
+            <a class="post-image-link" href="https://www.atatus.com/glossary/encapsulation/">
+                <img class="post-image u-object-fit lazyautosizes lazyloaded" data-srcset="/glossary/content/images/size/w400/2021/08/Encapsulation.jpeg 400w, /glossary/content/images/size/w750/2021/08/Encapsulation.jpeg 750w, /glossary/content/images/size/w960/2021/08/Encapsulation.jpeg 960w, /glossary/content/images/size/w1140/2021/08/Encapsulation.jpeg 1140w, /glossary/content/images/size/w1920/2021/08/Encapsulation.jpeg 1920w" data-sizes="auto" src="./enca_files/Encapsulation.jpeg" srcset="/glossary/content/images/size/w400/2021/08/Encapsulation.jpeg 400w, /glossary/content/images/size/w750/2021/08/Encapsulation.jpeg 750w, /glossary/content/images/size/w960/2021/08/Encapsulation.jpeg 960w, /glossary/content/images/size/w1140/2021/08/Encapsulation.jpeg 1140w, /glossary/content/images/size/w1920/2021/08/Encapsulation.jpeg 1920w" alt="Encapsulation" sizes="973px">
+            </a>
+        </div>
+    </div>
+                <div class="post-content kg-canvas u-text-format">
+                    <p>Object-oriented programming is a concept that is used in high-level languages like Java and Python to implement Objects and classes. Polymorphism, Encapsulation, Abstraction, and Inheritance are the four basic building elements of OOP. Other programming paradigms include procedural programming, which involves writing codes in sequential order.</p><p><strong>We will cover the following:</strong></p><!--kg-card-begin: html--><ol>
+    <li>
+        <a href="https://www.atatus.com/glossary/encapsulation/#what-is-encapsulation"> <b> What is Encapsulation? </b> </a> 
+    </li>
+    <li>
+        <a href="https://www.atatus.com/glossary/encapsulation/#types-of-encapsulation-in-oops"> <b> Types of Encapsulation in OOPs </b> </a> 
+    </li>
+    <li>
+        <a href="https://www.atatus.com/glossary/encapsulation/#how-to-hide-information-via-encapsulation"> <b> How to Hide Information via Encapsulation? </b> </a> 
+    </li>
+    <li>
+        <a href="https://www.atatus.com/glossary/encapsulation/#polymorphism-vs-encapsulation-vs-abstraction-vs-inheritance"> <b> Polymorphism vs. Encapsulation vs. Abstraction vs. Inheritance in OOPs </b> </a> 
+    </li>
+    <li>
+        <a href="https://www.atatus.com/glossary/encapsulation/#encapsulation-in-containerization"> <b> Encapsulation in Containerization </b> </a> 
+    </li>
+</ol><!--kg-card-end: html--><!--kg-card-begin: markdown--><h3 id="what-is-encapsulation"> What is Encapsulation? </h3><!--kg-card-end: markdown--><p>The process of wrapping data and functions that perform actions on the data into a single entity is known as encapsulation. A single unit is referred to as a class. Encapsulation is the process of encapsulating something in a capsule. That is, confining all of an object's relevant activities and data within that object. It protects the data and code from outside intervention.</p><p>One of the fundamentals of OOPs is encapsulation. It refers to the combination of data and procedures that operate on it. A technique for limiting unauthorized access to the values or state of a structured data object within a class. To access the values, the class usually provides publicly accessible methods (so-called <a href="https://dzone.com/articles/java-getter-and-setter-basics-common-mistakes-and">getters and setters</a>), which other client classes call to retrieve and modify the values within the object.</p><p>The main purpose or usage of encapsulation is to guarantee security for a class's data. To secure the data, we must employ private access modifiers, which limit access to the data outside of the class. Access modifiers are used to specify the level of access or scope of class members such as data members and functions.</p><p>Encapsulation is advantageous for various reasons:</p><!--kg-card-begin: markdown--><ul>
+<li>External code in a separate portion of our application does not change data inside our object in an unanticipated way</li>
+<li>Functionality is described in a single location rather than multiple locations</li>
+<li>It is defined in a logical location - the data storage location</li>
+</ul>
+<!--kg-card-end: markdown--><p>You simply need to know what outcome a method will produce when you use it to use it. You don't need to know anything about the object's internals to use it. Because both objects have the same interface, we could switch to utilizing another object that is completely different on the inside and not have to change any code.</p><!--kg-card-begin: html--><h3 id="types-of-encapsulation-in-oops"> Types of Encapsulation in OOPs </h3><!--kg-card-end: html--><p>There are three basic techniques to encapsulate data in Object Programming. Data members, methods, and classes can all be encapsulated.</p><!--kg-card-begin: markdown--><ol>
+<li><strong>Member Variable Encapsulation</strong><br>
+All data members should be defined as Private members of the Class in Object-Oriented Programming. Setters and Getters functions should be used by any object that wants to change or retrieve the value of a data member. You've probably heard of Data Member Encapsulation.</li>
+<li><strong>Function Encapsulation</strong><br>
+Private functions used just for internal <a href="https://www.atatus.com/glossary/application-programming-interface/">API</a> implementation must always be specified. The method should be declared as a Private method so that the user does not have access to it. Always remember to hide any function that does not need to be visible to the public.</li>
+<li><strong>Class Encapsulation</strong><br>
+It is used for internal API implementations follows the same logic. These classes should not be included in any API's public interface. They should be made private and hidden from your users. <em>For instance</em>, your API might contain a class that applies specific information. You should encapsulate that information class by defining it as a Private class if your user does not have access to it.</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><h3 id="how-to-hide-information-via-encapsulation"> How to Hide Information via Encapsulation? </h3><!--kg-card-end: html--><p>Encapsulation helps developers bundle data and methods together in object-oriented programming, but it can also be used to hide sensitive data from users. <a href="https://en.wikipedia.org/wiki/Information_hiding">Information hiding</a> is regulated in the Java programming language, as well as many other languages, by employing getter/setter methods for data attributes that will be readable or that may be altered by other classes.</p><p>Within a class, a getter method is used to retrieve the value of a specified variable and a setter method is used to set or change the value of a specified variable. Access modifiers allow programmers to control the visibility and accessibility of classes, as well as the data and methods they include.</p><p>In object-oriented programming, there are four different types of access modifiers:</p><p><strong>Private</strong></p><p>Private Members' access is limited to the scope of the class, which implies private members are not accessible or available from any other class.</p><p><strong>Default</strong></p><p>It is not a keyword; nonetheless, if no access modifiers keyword is defined, it will be used as default. The default members' access is limited to the current or the same package. Classes that are not in the same package cannot access or use the default members.</p><p><strong>Protected</strong></p><p>The protected class members' access level or scope is limited to within the current or same package, as well as from another package if and only if a class is inherited from another package.</p><p><strong>Public</strong></p><p>The public access modifier has the broadest scope, implying that public class members can be accessed from any class, regardless of package or relationship.</p><p>There are numerous advantages to utilizing encapsulation in programming to hide information about attributes and methods. One is that it stops other developers from using your code in scripts or APIs. Secondly, it protects users from understanding how a class stores data and allows the developers to change the data type of a field without forcing developers and users to update their code.</p><!--kg-card-begin: html--><h3 id="polymorphism-vs-encapsulation-vs-abstraction-vs-inheritance"> Polymorphism vs. Encapsulation vs. Abstraction vs. Inheritance in OOPs </h3><!--kg-card-end: html--><p><strong>Polymorphism</strong></p><p>The ability to exist in multiple forms is referred to as polymorphism. In Java and Python, variables, functions, and objects can have many different forms. Run-time polymorphism and compile-time polymorphism are the two types of polymorphism. While the application is operating, run time can take on numerous forms while running, and compile-time can take on different forms during compilation.</p><p><strong>Encapsulation</strong></p><p>This is a programming technique that hides implementation details. It drastically minimizes the complexity of software development. Only methods are exposed with Encapsulation. The programmer is simply concerned with the operations and does not have to worry about implementation specifics.</p><p>In essence, encapsulation is performed by utilizing private variables to build hidden classes and then calling them up using public variables. This technique allows a class to be modified or maintained without having to worry about the methods that use it.</p><p><strong>Abstraction</strong></p><p>Abstraction is a programming style in which the user is not shown the specifics of the programming codes and just the relevant information is given. Abstraction is more interested in ideas than in events. It's the equivalent of a person running a program without seeing the source code.</p><p>In Java and Python, abstraction is performed through Abstract classes or <a href="https://www.javatpoint.com/interface-in-java">interfaces</a>. The Java abstraction is implemented by NetBeans and Eclipse, whereas the Python abstraction is implemented by Django.</p><p><strong>Inheritance</strong></p><p>Objects can communicate with one another by using each block's properties or by inheriting the functionality of a block. Code reuse is ensured by inheritance. A programmer can utilize inheritance to access millions of Java and Python libraries.</p><p>Other classes or functions can inherit and extend the properties of a class. There are two different kinds of classes. The first is the parent or base class, while the second is the child class, which can inherit the parent class's properties. In Object-Oriented programming, inheritance is a crucial foundation. It is the technique by which classes inherit the attributes of other classes in OOP languages.</p><!--kg-card-begin: html--><h3 id="encapsulation-in-containerization"> Encapsulation in Containerization </h3><!--kg-card-end: html--><p>In programming, <a href="https://www.atatus.com/glossary/container/">containers</a> are a type of encapsulation in which data and methods are combined into a single bundle. Containers are a new sort of software that may be used to essentially package a piece of code, as well as all of the libraries and other dependencies that it needs to run.</p><p>Containers create an isolated virtual environment in which an application can be started with the least amount of storage and processing power possible. A collection of containers can share a single operating system and processing resources from a single piece of hardware.</p><p>Because of its very efficient use of computer resources, containerization has emerged as a viable alternative to virtual machines. Multiple operating systems and applications could operate at the same time while sharing the resources of a single computer due to virtualization. By sharing a host operating system and placing the container runtime engine on the host machine's OS, containers improved on this concept.</p><p>A computer running four virtual machines consumes more resources for each operating system instance it runs, whereas a computer with a containerization engine installed might run the same amount of applications on a single operating system. As a result, several containers can run on the same amount of computational power as a single virtual machine.</p><h2 id="conclusion">Conclusion</h2><p>Encapsulation can be used by IT organizations to protect sensitive data and comply with industry-specific data security and privacy regulations such as <a href="https://www.hipaajournal.com/hipaa-data-security-requirements/">HIPAA</a> and <a href="https://www.pcisecuritystandards.org/pci_security/">PCI DDS</a>. The encapsulation process helps to compartmentalize data, limiting vulnerabilities by only allowing users with need-to-know basis access to code implementations.</p><hr><!--kg-card-begin: html--><h3>
+    Monitor Your Entire Application with 
+    <a href="https://www.atatus.com/">
+    <span style="color:rgb(0, 0, 255);">Atatus</span>
+    </a>
+    </h3><!--kg-card-end: html--><!--kg-card-begin: html--><p>
+    Atatus provides a set of performance measurement tools to monitor and improve the performance of your frontend, backends, logs and infrastructure applications in real-time. Our platform can capture millions of performance data points from your applications, allowing you to quickly resolve issues and ensure digital customer experiences.
+    </p><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="./enca_files/apm_dashboard-2.png" class="kg-image" alt="" loading="lazy" width="1382" height="841" srcset="https://www.atatus.com/glossary/content/images/size/w600/2021/07/apm_dashboard-2.png 600w, https://www.atatus.com/glossary/content/images/size/w1000/2021/07/apm_dashboard-2.png 1000w, https://www.atatus.com/glossary/content/images/2021/07/apm_dashboard-2.png 1382w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: html--><p> <a href="https://www.atatus.com/">
+    <span style="color:rgb(0, 0, 255);">Atatus</span>
+    </a>
+     can be beneficial to your business, which provides a comprehensive view of your application, including how it works, where performance bottlenecks exist, which users are most impacted, and which errors break your code for your frontend, backend, and infrastructure.
+    </p><!--kg-card-end: html--><!--kg-card-begin: html--><p id="atatus"> <a href="https://www.atatus.com/signup">
+    <span style="color:rgb(0, 0, 255);"> Try your 14-day free trial of Atatus.</span>
+    </a>
+    </p><!--kg-card-end: html-->
+                </div>
+                <div class="container medium">
+                    <div class="share u-hover-wrapper">
+    <a class="share-item share-facebook u-hover-item" href="https://www.facebook.com/sharer.php?u=https://www.atatus.com/glossary/encapsulation/" target="_blank"><i class="icon icon-facebook"></i></a>
+    <a class="share-item share-twitter u-hover-item" href="https://twitter.com/intent/tweet?url=https://www.atatus.com/glossary/encapsulation/&amp;text=Encapsulation" target="_blank"><i class="icon icon-twitter"></i></a>
+    <a class="share-item share-pinterest u-hover-item" href="https://pinterest.com/pin/create/button/?url=https://www.atatus.com/glossary/encapsulation/&amp;media=&amp;description=Encapsulation" target="_blank" data-pin-do="none"><i class="icon icon-pinterest"></i></a>
+    <a class="share-item share-linkedin u-hover-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.atatus.com/glossary/encapsulation/&amp;title=Encapsulation" target="_blank"><i class="icon icon-linkedin"></i></a>
+    <a class="share-item share-reddit u-hover-item" href="https://reddit.com/submit?url=https://www.atatus.com/glossary/encapsulation/&amp;title=Encapsulation" target="_blank"><i class="icon icon-reddit"></i></a>
+    <a class="share-item share-tumblr u-hover-item" href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.atatus.com/glossary/encapsulation/&amp;title=Encapsulation" target="_blank"><i class="icon icon-tumblr"></i></a>
+    <a class="share-item share-vk u-hover-item" href="http://vk.com/share.php?url=https://www.atatus.com/glossary/encapsulation/&amp;title=Encapsulation" target="_blank"><i class="icon icon-vk"></i></a>
+    <a class="share-item share-pocket u-hover-item" href="https://getpocket.com/edit?url=https://www.atatus.com/glossary/encapsulation/" target="_blank"><i class="icon icon-pocket"></i></a>
+    <a class="share-item share-telegram u-hover-item" href="https://t.me/share/url?url=https://www.atatus.com/glossary/encapsulation/&amp;text=Encapsulation" target="_blank"><i class="icon icon-telegram"></i></a>
+</div>                        <section class="author">
+        <div class="author-image-placeholder u-placeholder">
+            <img class="author-image lazyload u-object-fit" data-srcset="/glossary/content/images/size/w150/2021/05/Mini-me.jpg" src="./enca_files/Mini-me.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Janani">
+        </div>
+        <div class="author-wrapper">
+            <header class="author-header">
+                <div class="author-header-wrapper">
+                    <h4 class="author-name">Janani</h4>
+                    <div class="author-social">
+                            <a class="author-social-item author-twitter" href="https://twitter.com/@A_K_Janani" target="_blank">Twitter</a>
+                        <a class="author-social-item author-more" href="https://www.atatus.com/glossary/author/janani/">More posts</a>
+                    </div>
+                </div>
+            </header>
+            <div class="author-bio">Janani works for Atatus as a Content Writer. She's devoted to assisting customers in getting the most out of application performance monitoring (APM) tools.</div>
+                <div class="author-location">
+                    <i class="author-location-icon icon icon-map-marker"></i>
+                    India
+                </div>
+        </div>
+    </section>
+                </div>
+            </article>
+            <div class="navigation container medium">
+        <div class="navigation-item navigation-previous">
+            <a class="navigation-item-link button-arrow button-arrow-left" href="https://www.atatus.com/glossary/docker-swarm/">
+                <i class="button-arrow-icon icon icon-arrow-left"></i> Previous Post
+            </a>
+        </div>
+
+        <div class="navigation-item navigation-next">
+            <a class="navigation-item-link button-arrow button-arrow-right" href="https://www.atatus.com/glossary/endpoint-security/">
+                Next Post <i class="button-arrow-icon icon icon-arrow-right"></i>
+            </a>
+        </div>
+</div>                <section class="related-posts container medium">
+            <h3 class="related-title"><span class="text">You might also like...</span></h3>
+            <div class="row">
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-hash-e">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="https://www.atatus.com/glossary/enterprise-security/">
+                <img class="post-image lazyload u-object-fit" data-srcset="/glossary/content/images/size/w400/2021/08/Enterprise-Security.jpeg 400w, /glossary/content/images/size/w750/2021/08/Enterprise-Security.jpeg 750w, /glossary/content/images/size/w960/2021/08/Enterprise-Security.jpeg 960w, /glossary/content/images/size/w1140/2021/08/Enterprise-Security.jpeg 1140w, /glossary/content/images/size/w1920/2021/08/Enterprise-Security.jpeg 1920w" data-sizes="auto" src="./enca_files/Enterprise-Security.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Enterprise Security">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="https://www.atatus.com/glossary/enterprise-security/">Enterprise Security</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-08-25">
+                            Aug 25, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    6 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-hash-e">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="https://www.atatus.com/glossary/enterprise-application-integration/">
+                <img class="post-image lazyload u-object-fit" data-srcset="/glossary/content/images/size/w400/2021/08/Enterprise-Application-Integration--EAI-.jpeg 400w, /glossary/content/images/size/w750/2021/08/Enterprise-Application-Integration--EAI-.jpeg 750w, /glossary/content/images/size/w960/2021/08/Enterprise-Application-Integration--EAI-.jpeg 960w, /glossary/content/images/size/w1140/2021/08/Enterprise-Application-Integration--EAI-.jpeg 1140w, /glossary/content/images/size/w1920/2021/08/Enterprise-Application-Integration--EAI-.jpeg 1920w" data-sizes="auto" src="./enca_files/Enterprise-Application-Integration--EAI-.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Enterprise Application Integration (EAI)">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="https://www.atatus.com/glossary/enterprise-application-integration/">Enterprise Application Integration (EAI)</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-08-16">
+                            Aug 16, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    6 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-hash-e">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="https://www.atatus.com/glossary/endpoint-security/">
+                <img class="post-image lazyload u-object-fit" data-srcset="/glossary/content/images/size/w400/2021/08/Endpoint-Security.jpeg 400w, /glossary/content/images/size/w750/2021/08/Endpoint-Security.jpeg 750w, /glossary/content/images/size/w960/2021/08/Endpoint-Security.jpeg 960w, /glossary/content/images/size/w1140/2021/08/Endpoint-Security.jpeg 1140w, /glossary/content/images/size/w1920/2021/08/Endpoint-Security.jpeg 1920w" data-sizes="auto" src="./enca_files/Endpoint-Security.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Endpoint Security">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="https://www.atatus.com/glossary/endpoint-security/">Endpoint Security</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-08-16">
+                            Aug 16, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    6 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+            </div>
+        </section>
+    </main>
+</div>
+        </div>
+        <section class="callout-section container medium">
+    <div class="row">
+        <div class="col-md-8">
+            <article class="callout-text">
+                <h2>Monitor your entire software stack</h2>
+                <div>
+                    Gain end-to-end visibility of every business transaction and see how each layer of your software stack affects your customer experience.
+                </div>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <a class="callout-btn button-arrow button-arrow-right" href="https://www.atatus.com/">Discover Atatus
+              <i class="button-arrow-icon icon icon-arrow-right" style="color:#000000;"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="comment-container">
+  <div class="container">
+    <div class="comment container medium">
+      <div id="disqus_thread">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="sections">
+
+      <div class="section">
+        <div class="uppercaseHeader">PRODUCT</div>
+        <a href="https://www.atatus.com/application-monitoring/features">Application Performance Monitoring (APM)</a>
+        <a href="https://www.atatus.com/real-user-monitoring/features">Real User Monitoring (RUM)</a>
+        <a href="https://www.atatus.com/infrastructure-monitoring/features">Infrastructure Monitoring</a>
+        <a href="https://www.atatus.com/logs-monitoring/features">Logs Monitoring</a>
+        <a href="https://www.atatus.com/error-tracking/features">Error Tracking</a>
+        <a href="https://www.atatus.com/pricing">Pricing</a>
+        <a href="https://www.atatus.com/signup">Sign Up</a>
+      </div>
+
+      <div class="section">
+        <div class="uppercaseHeader">PLATFORMS</div>
+        <a href="https://www.atatus.com/for/php">PHP Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/java">Java Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/nodejs">Node.js Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/laravel">Laravel Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/symfony">Symfony Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/express">Express Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/hapi">Hapi Performance Monitoring</a>
+      </div>
+
+      <div class="section" style="margin-top:56px;">
+        <a href="https://www.atatus.com/for/ruby">Ruby Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/python">Python Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/javascript">Javascript Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/angular">Angular Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/react">React Performance Monitoring</a>
+        <a href="https://www.atatus.com/for/vue">Vue.js Performance Monitoring</a>
+        <a href="https://www.atatus.com/platforms">See all platforms</a>
+      </div>
+
+      <div class="section">
+        <div class="uppercaseHeader">RESOURCES</div>
+        <a href="https://docs.atatus.com/docs/">Docs</a>
+        <a href="https://www.atatus.com/integrations">Alert Integrations</a>
+        <a href="https://docs.atatus.com/docs/api/overview.html">Developer API</a>
+        <a href="https://www.atatus.com/tools/free-tools">Free Tools</a>
+        <div class="uppercaseHeader" style="margin-bottom: 8px; padding-top: 5px; padding-bottom: 5px;"> COMPARE </div>
+        <a href="https://www.atatus.com/new-relic-alternative">New Relic</a>
+        <a href="https://www.atatus.com/datadog-alternative">Datadog</a>
+      </div>
+
+      <div class="section">
+        <div class="uppercaseHeader">COMPANY</div>
+        <a href="https://www.atatus.com/blog/">Blog</a>
+        <a href="https://www.atatus.com/glossary">Glossary</a>
+        <a href="https://www.atatus.com/customers">Customers</a>
+        <a href="https://www.atatus.com/datasheets">Datasheets</a>
+        <a href="https://www.atatus.com/about">About Us</a>
+        <a href="https://www.atatus.com/contact">Contact Us</a>
+        <a href="https://www.atatus.com/request-demo">Request Demo</a>
+      </div>
+
+      <div class="section" style="margin: auto;">
+        <div class="copyright">
+          <p>© 2024 NamLabs Technologies Pvt Ltd. All Rights Reserved.</p>
+          <div>
+            <a href="https://www.atatus.com/terms">Terms</a>
+            ·
+            <a href="https://www.atatus.com/privacy">Privacy</a>
+            .
+            <a href="https://www.atatus.com/security">Security</a>
+            ·
+            <a href="https://www.atatus.com/gdpr-compliance">GDPR</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+    </div>
+
+    <div class="dimmer"></div>
+
+    <div class="off-canvas">
+        <div class="canvas-close">
+            <i class="canvas-icon icon icon-window-close"></i>
+        </div>
+        <div class="mobile-menu"><div class="slicknav_menu"><a href="https://www.atatus.com/glossary/encapsulation/#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                <li class="menu-item hidden-xs hidden-sm hidden-sm"><a class="menu-item-link" href="https://www.atatus.com/login" role="menuitem" tabindex="-1">Login</a></li>
+                <li class="menu-item"><a class="menu-item-link free-trial-btn" href="https://www.atatus.com/signup" role="menuitem" tabindex="-1">Free Trial</a></li>
+            </ul></div><div class="slicknav_menu"><a href="https://www.atatus.com/glossary/encapsulation/#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+        <li class="menu-item menu-item-home"><a class="menu-item-link" href="https://www.atatus.com/" role="menuitem" tabindex="-1">Home</a></li>
+        <li class="menu-item menu-item-blog"><a class="menu-item-link" href="https://www.atatus.com/blog/" role="menuitem" tabindex="-1">Blog</a></li>
+        <li class="menu-item menu-item-glossary"><a class="menu-item-link" href="https://www.atatus.com/glossary/" role="menuitem" tabindex="-1">Glossary</a></li>
+        <li class="menu-item menu-item-apm"><a class="menu-item-link" href="https://www.atatus.com/application-monitoring/features" role="menuitem" tabindex="-1">APM</a></li>
+        <li class="menu-item menu-item-rum"><a class="menu-item-link" href="https://www.atatus.com/real-user-monitoring/features" role="menuitem" tabindex="-1">RUM</a></li>
+        <li class="menu-item menu-item-logs"><a class="menu-item-link" href="https://www.atatus.com/logs-monitoring/features" role="menuitem" tabindex="-1">Logs</a></li>
+        <li class="menu-item menu-item-pricing"><a class="menu-item-link" href="https://www.atatus.com/pricing" role="menuitem" tabindex="-1">Pricing</a></li>
+</ul></div></div>
+    </div>
+
+    <script src="./enca_files/jquery-3.3.1.min.js.download" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script src="./enca_files/main.min.js.download"></script>
+
+    
+
+    <!-- third party javascripts -->
+
+<!-- prism.js -->
+<script src="./enca_files/prism.min.js.download" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-markup-templating.min.js.download" integrity="sha512-+8BiRfWso6waiFDv6tEmWF8yfPGgxAtOYLDUB0rRISLwtpxkJ9lpPNUhxwWlikn3qSO+4RQyzDppi62o3ON/AA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-javascript.min.js.download" integrity="sha512-jwrwRWZWW9J6bjmBOJxPcbRvEBSQeY4Ad0NEXSfP0vwYi/Yu9x5VhDBl3wz6Pnxs8Rx/t1P8r9/OHCRciHcT7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-css.min.js.download" integrity="sha512-uMdVuOpm+9lNPCT7mV/YaMb9YQ/R4+eeON7aEMj6Ig/f4BoU+Q5k6iaZkDsX7LH9cjTHZt0CuKxbzd0/fndrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-php.min.js.download" integrity="sha512-plzrTi61ltEMFf84gTVO9IkvIMfBu07bnDuahvdlIclmFWzXJ9VcRsny9d45sxFZRv3jJg/MHNyuxnUYEMxMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-sql.min.js.download" integrity="sha512-sijCOJblSCXYYmXdwvqV0tak8QJW5iy2yLB1wAbbLc3OOIueqymizRFWUS/mwKctnzPKpNdPJV3aK1zlDMJmXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-yaml.min.js.download" integrity="sha512-6O/PZimM3TD1NN3yrazePA4AbZrPcwt1QCGJrVY7WoHDJROZFc9TlBvIKMe+QfqgcslW4lQeBzNJEJvIMC8WhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-sass.min.js.download" integrity="sha512-H+8WG9CyqQNJeLmcLA7jiIC5RNhS4JC8ABCFw28qPSUO8ahwCi1cY+gDBDupWSztf8893Up2sCnTh8H+3fKnNw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-json.min.js.download" integrity="sha512-QXFMVAusM85vUYDaNgcYeU3rzSlc+bTV4JvkfJhjxSHlQEo+ig53BtnGkvFTiNJh8D+wv6uWAQ2vJaVmxe8d3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-bash.min.js.download" integrity="sha512-whYhDwtTmlC/NpZlCr6PSsAaLOrfjVg/iXAnC4H/dtiHawpShhT2SlIMbpIhT/IL/NrpdMm+Hq2C13+VKpHTYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-python.min.js.download" integrity="sha512-AKaNmg8COK0zEbjTdMHJAPJ0z6VeNqvRvH4/d5M4sHJbQQUToMBtodq4HaV4fa+WV2UTfoperElm66c9/8cKmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-ruby.min.js.download" integrity="sha512-/Dti0iV9cxgJe8r0U/89YJIv9ZBQu1ExEWffVyBj4juMQ4GNglQ3TQ0Up4gcbiHvg0g87arcUFbKBtw2PxH1Dw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-java.min.js.download" integrity="sha512-xKcnbsdT0KMoA4yrozkqZM1XJVTrPsjdQwvigxlAlxEDu8YDvC/jl+LfVqn0fY3Vs6m2y4a89JCHEIA/Z9zpmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-csharp.min.js.download" integrity="sha512-pmt3kb6dRndjFXFFwCa3rSzuUQ0GjeCfC5QULWde+8ZBIsUzuP1heOIOSAMfAyXHSufrrTp8h7UHw85K4IJ2/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-go.min.js.download" integrity="sha512-w200Nz1i9KgDNi+IpPMgpZBVRIvfVK/V5vskyHjkz7XJkVnRJcb1uNmpiHhDv0/Ln+GG2VqScKKz/1izBfg64Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-rust.min.js.download" integrity="sha512-R/HpMlNfZZV6DxMhNz1dYJbBaPBVSOCqX8imo3uGUurhPDHRcXrBxkEVOjawwUwTMfOqT6t1eLYYQXIjFWCX/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-dart.min.js.download" integrity="sha512-r/W8eHXvGAyqo0Pa1hwUx9znj2RKBDKgTZ7iL5R4FIJpLpF1HPXKHiGorzKE5gwj906GlNqAskHKSNpyVziozw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-typescript.min.js.download" integrity="sha512-uOw7XYETzS/DPmmirpP5UCMihSDNMeyTS965J0/456OSPfxn9xEtHHjj5Q/5WefVdqyMfN/afmQnNpZd/tpkcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./enca_files/prism-jsx.min.js.download" integrity="sha512-m3JYEI6gx5fh9jF10FjGoMzVKcV2N6nchcDcqPCdI1L3R2WQV7br2XVNR8iTLb2daOMRl3zldbcfT40xU2ntVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<div id="ghost-portal-root"></div></body></html>
